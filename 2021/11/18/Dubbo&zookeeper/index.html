@@ -1,157 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
+  <meta charset="utf-8">
+  
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-
-    <!--Description-->
-    
-        <meta name="description" content="相关概念传统项目和互联网项目的区别
-
-大型互联网项目架构的目标衡量网站的性能指标
-**响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。
-并发数:指系统同时能处理的请求数量。
-**并发连接数:**指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量（一">
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="John Doe">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Dubbo&amp;Zookeeper"/>
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Hexo"/>
-
-    <!--Page Cover-->
-    
-        <meta property="og:image" content=""/>
-    
-
-    <!-- Title -->
-    
-    <title>Dubbo&amp;Zookeeper - Hexo</title>
-
-    <!-- Custom CSS -->
-    
-<link rel="stylesheet" href="/css/reset.css">
-
-    
-<link rel="stylesheet" href="/css/main.css">
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Google Analytics -->
-    
-
-
-    <!--Favicon-->
-    
+  
+  <title>Dubbo&amp;Zookeeper | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="相关概念传统项目和互联网项目的区别  大型互联网项目架构的目标衡量网站的性能指标 **响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。 并发数:指系统同时能处理的请求数量。 **并发连接数:**指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量（一次链接可能有多个请求，一次链接也可能复用） **请求数:**也称为QPS(Query Per Sec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dubbo&amp;Zookeeper">
+<meta property="og:url" content="http://example.com/2021/11/18/Dubbo&zookeeper/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="相关概念传统项目和互联网项目的区别  大型互联网项目架构的目标衡量网站的性能指标 **响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。 并发数:指系统同时能处理的请求数量。 **并发连接数:**指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量（一次链接可能有多个请求，一次链接也可能复用） **请求数:**也称为QPS(Query Per Sec">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114143831649.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205317868.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205430647.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205557256.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211111154928311.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211013061.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211045941.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211251972.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211112100726397.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211112104624651.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1578297063167.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1578297477356.png">
+<meta property="og:image" content="e:/BaiduNetdiskDownload/资料-Dubbo/Dubbo/资料/images/1578297603008.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1578297758655.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135059894.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135623086.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135647602.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211113215035749.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114133943645.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114134006514.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114133747272.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114140324573.png">
+<meta property="og:image" content="d:/Typoramd/Dubbo&zookeeper/Dubbo&zookeeper.assets/image-20211114140324573.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114140249825.png">
+<meta property="og:image" content="d:/Typoramd/Dubbo&zookeeper/Dubbo&zookeeper.assets/image-20211114140113741.png?lastModify=1637231698">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114141233035.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1577548250377.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1577548052037.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1577548175232.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/1577548112773.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12540413-d5924f70213774e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/882/format/webp">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211112103019426.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114152013152.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114150412939.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/zknamespace.jpg">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115092727992.png">
+<meta property="og:image" content="d:/Typoramd/Dubbo&zookeeper/Dubbo&zookeeper.assets/image-20211114191048713.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114190236967.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118131807231.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118124529642.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118124939417.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118130023454.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118130303572.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118131342498.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141013483.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118134147402.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118134207349.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141306373.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141403483.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141611250.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115192919579.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115153940936.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115155140706.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115155454060.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115215138963.png">
+<meta property="og:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211115190429329.png">
+<meta property="article:published_time" content="2021-11-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-19T07:20:26.612Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kisstt/typora/raw/master/img/image-20211114143831649.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
-
-<!-- Menu -->
-<!-- Navigation -->
-<header>
-    <div class="logo">
-        <a href="/">Hexo</a>
-    </div><!-- end logo -->
-
-    <div id="menu_icon"></div>
-    <nav>
-        <ul>
-            
-            <li>
-                <a href="/">Home</a>
-            </li>
-            
-            <li>
-                <a href="/archives">Archives</a>
-            </li>
-            
-        </ul>
-    </nav><!-- end navigation menu -->
-
-    <div class="footer clearfix">
-        <ul class="social clearfix">
-            
-            
-                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
-            
-            
-                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
-            
-            
-                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
-            
-            
-                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
-            
-            
-            
-            
-        </ul><!-- end social -->
-
-        <div class="rights">
-            <p>Copyright © 2014 magnetic.</p>
-            <p>Template by <a target="_blank" rel="noopener" href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
-            <p>Hexo Theme by <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan K.</a></p>
-        </div><!-- end rights -->
-    </div ><!-- end footer -->
-</header><!-- end header -->
-
-
-<!-- Main Content -->
-<section class="main clearfix">
-
-    <section class="top" style="background: url('http://placehold.it/1300x500');">
-        <div class="wrapper content_header clearfix">
-            
-
-<div class="work_nav">
-
-    <ul class="btn clearfix">
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-        <li><a href="/2021/11/18/hello-world/" class="previous" data-title="Hello World"></a></li>
+          <a class="main-nav-link" href="/">Home</a>
         
-        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-        <li><a class="next disabled"></a></li>
+      </nav>
+      <nav id="sub-nav">
         
-    </ul>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Dubbo&amp;zookeeper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/18/Dubbo&zookeeper/" class="article-date">
+  <time datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/">中间件</a>
+  </div>
 
-</div><!-- end work_nav -->
-            <h1 class="title">Dubbo&Zookeeper</h1>
-        </div>
-    </section><!-- end top -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Dubbo&amp;Zookeeper
+    </h1>
+  
 
-    <section class="wrapper">
-        <div class="content">
-
-            <!-- Gallery -->
-            
-
-            <!-- Content -->
-            <h1 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h1><p>传统项目和互联网项目的区别</p>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h1><p>传统项目和互联网项目的区别</p>
 <p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114143831649.png" alt="image-20211114143831649"></p>
 <h3 id="大型互联网项目架构的目标"><a href="#大型互联网项目架构的目标" class="headerlink" title="大型互联网项目架构的目标"></a>大型互联网项目架构的目标</h3><h5 id="衡量网站的性能指标"><a href="#衡量网站的性能指标" class="headerlink" title="衡量网站的性能指标"></a>衡量网站的性能指标</h5><ul>
 <li>**响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。</li>
@@ -935,47 +934,136 @@
 <h4 id="Redis的分布式锁"><a href="#Redis的分布式锁" class="headerlink" title="Redis的分布式锁"></a>Redis的分布式锁</h4><p>待补充！！！！！！！！！！！</p>
 <h2 id="二、关于设置图床"><a href="#二、关于设置图床" class="headerlink" title="二、关于设置图床"></a>二、关于设置图床</h2><p><a target="_blank" rel="noopener" href="https://www.codenong.com/cs106528795/">https://www.codenong.com/cs106528795/</a></p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/18/Dubbo&zookeeper/" data-id="ckw5qtxl100003sw5b2va0nno" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
 
-            <!-- Tags -->
-            
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/18/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/">中间件</a></li></ul>
+    </div>
+  </div>
 
 
-<div class="tags">
-    <a href="/tags/学习笔记/">学习笔记</a>
-</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/18/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/18/Dubbo&zookeeper/">Dubbo&amp;Zookeeper</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
-            <!-- Comments -->
-            <div>
-                
+
+<script src="/js/script.js"></script>
 
 
 
 
-            </div>
-        </div><!-- end content -->
-    </section>
-</section><!-- end main -->
-
-<!-- After footer scripts -->
-
-<!-- jQuery -->
-
-<script src="/js/jquery.js"></script>
-
-
-<!-- Custom Code -->
-
-<script src="/js/main.js"></script>
-
-
-<!-- Gallery -->
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Disqus Comments -->
-
-
+  </div>
 </body>
-
 </html>
