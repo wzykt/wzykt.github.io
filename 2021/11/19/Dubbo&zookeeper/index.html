@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="相关概念传统项目和互联网项目的区别
+
+大型互联网项目架构的目标衡量网站的性能指标
+**响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。
+并发数:指系统同时能处理的请求数量。
+**并发连接数:**指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量（一">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Hexo</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">Hexo</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a target="_blank" rel="noopener" href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('http://placehold.it/1300x500');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2021/11/18/hello-world/" class="next" data-title="Hello World"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Untitled</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <h1 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h1><p>传统项目和互联网项目的区别</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114143831649.png" alt="image-20211114143831649"></p>
+<h3 id="大型互联网项目架构的目标"><a href="#大型互联网项目架构的目标" class="headerlink" title="大型互联网项目架构的目标"></a>大型互联网项目架构的目标</h3><h5 id="衡量网站的性能指标"><a href="#衡量网站的性能指标" class="headerlink" title="衡量网站的性能指标"></a>衡量网站的性能指标</h5><ul>
+<li>**响应时间:**指执行一个请求从开始到最后收到响应数据所花费的总体时间。</li>
+<li><strong>并发数</strong>:指系统同时能处理的请求数量。<ul>
+<li>**并发连接数:**指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量（一次链接可能有多个请求，一次链接也可能复用）</li>
+<li>**请求数:**也称为QPS(Query Per Second)指每秒多少请求.</li>
+<li>**并发用户数:**单位时间内有多少用户</li>
+</ul>
+</li>
+<li>**吞吐量:**指单位时间内系统能处理的请求数量。<ul>
+<li>QPS: Query Per Second每秒查询数。</li>
+<li>TPS: Transactions Per Second每秒事务数。</li>
+<li>一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。客户机在发送请求时开始计时，收到服务器响应后结束计时，以此来计算使用的时间和完成的事务个数。（比如点击一个链接，当这个链接的全部请求都已经到位时，表示一个事务结束）</li>
+<li>一个页面的一次访问，只会形成一个TPS;但一次页面请求，可能产生多次对服务器的请求，就会有多个QPS<br>QPS &gt;= 并发连接数&gt;=TPS</li>
+</ul>
+</li>
+<li>**高性能:**提供快速的访问体验。</li>
+<li>**高可用:**网站服务一直可以正常访问。</li>
+<li>**可伸缩:**通过硬件增加/减少，提高/降低处理能力。</li>
+<li>**高可扩展:**系统间耦合低，方便的通过新增/移除方式，增加/减少新的功能/模块。</li>
+<li>**安全性:**提供网站安全访问和数据加密，安全存储等策略。。</li>
+<li>**敏捷性:**随需应变，快速响应。</li>
+</ul>
+<h3 id="分布式和集群"><a href="#分布式和集群" class="headerlink" title="分布式和集群"></a>分布式和集群</h3><ul>
+<li><p>集群:很多“人”一起，干一样的事。</p>
+<p>一个业务模块，部署在多台服务器上（完整的一个项目）。</p>
+</li>
+<li><p>分布式:很多“人”一起，干不一样的事。这些不一样的事，合起来是一件大事。</p>
+<p>一个大的业务系统，拆分为小的业务模块，分别部署在不同的机器上。</p>
+</li>
+</ul>
+<p>集群和分布式是并存的</p>
+<p><strong>单机系统</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205317868.png" alt="image-20211110205317868"></p>
+<p><strong>集群系统</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205430647.png" alt="image-20211110205430647"></p>
+<p>缺点是：不好做扩展，不方便伸缩（配置新的机器）</p>
+<p><strong>集群加分布式</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211110205557256.png" alt="image-20211110205557256"></p>
+<h1 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>官网 ： <a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/">https://dubbo.apache.org/zh/</a></p>
+<p>官方文档：<a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/docs/introduction/">https://dubbo.apache.org/zh/docs/introduction/</a></p>
+<h4 id="Dubbo架构"><a href="#Dubbo架构" class="headerlink" title="Dubbo架构"></a>Dubbo架构</h4><p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211111154928311.png" alt="image-20211111154928311"></p>
+<p><strong>节点说明</strong></p>
+<ul>
+<li>Provider:暴露服务的服务提供方.</li>
+<li>Container:服务运行容器</li>
+<li>Consumer:调用远程服务的服务消费方</li>
+<li>Registry:服务注册与发现的注册中心</li>
+<li>Monitor:统计服务的调用次数和调用时间的监控中心</li>
+</ul>
+<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p> 使用Maven创建SpringMvc项目</p>
+<p>1.创建空项目</p>
+<p>2.创建两个module</p>
+<p>导入相关依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- servlet3.0规范的坐标 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--spring的坐标--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--springmvc的坐标--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--日志--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.21<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.21<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--Dubbo的起步依赖，版本2.7之后统一为rg.apache.dubb --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;dubbo.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--ZooKeeper客户端实现 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-framework<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;zookeeper.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--ZooKeeper客户端实现 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-recipes<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;zookeeper.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--dubbo-web模块需要的依赖--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--依赖service模块--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.wzy<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-service<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--tomcat插件--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">port</span>&gt;</span>8000<span class="tag">&lt;/<span class="name">port</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">path</span>&gt;</span>/<span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-编写配置文件"><a href="#2-编写配置文件" class="headerlink" title="2.编写配置文件"></a>2.编写配置文件</h4><p><strong>log4j属于公共配置</strong></p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL</span></span><br><span class="line"><span class="comment"># Global logging configuration</span></span><br><span class="line"><span class="meta">log4j.rootLogger</span>=<span class="string">info, stdout,file</span></span><br><span class="line"><span class="comment"># My logging configuration...</span></span><br><span class="line"><span class="comment">#log4j.logger.com.tocersoft.school=DEBUG</span></span><br><span class="line"><span class="comment">#log4j.logger.net.sf.hibernate.cache=debug</span></span><br><span class="line"><span class="comment">## Console output...</span></span><br><span class="line"><span class="meta">log4j.appender.stdout</span>=<span class="string">org.apache.log4j.ConsoleAppender</span></span><br><span class="line"><span class="meta">log4j.appender.stdout.layout</span>=<span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.stdout.layout.ConversionPattern</span>=<span class="string">%5p %d %C: %m%n</span></span><br><span class="line"></span><br><span class="line"><span class="meta">log4j.appender.file</span>=<span class="string">org.apache.log4j.FileAppender</span></span><br><span class="line"><span class="meta">log4j.appender.file.File</span>=<span class="string">../logs/iask.log</span></span><br><span class="line"><span class="meta">log4j.appender.file.layout</span>=<span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.file.layout.ConversionPattern</span>=<span class="string">%d&#123;yyyy-MM-dd HH:mm:ss&#125;  %l  %m%n</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>dubbo-service模块</strong></p>
+<p>spring/springmvc.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:dubbo</span>=<span class="string">&quot;http://dubbo.apache.org/schema/dubbo&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:mvc</span>=<span class="string">&quot;http://www.springframework.org/schema/mvc&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">         http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--开启注解--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:annotation-driven</span>/&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>dubbo-web模块</strong></p>
+<p>spring/springmvc.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:dubbo</span>=<span class="string">&quot;http://dubbo.apache.org/schema/dubbo&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:mvc</span>=<span class="string">&quot;http://www.springframework.org/schema/mvc&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">         http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:annotation-driven</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--开启组件扫描--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;com.wzy.controller&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-编写业务"><a href="#3-编写业务" class="headerlink" title="3.编写业务"></a>3.编写业务</h4><p><strong>dubbo-service模块</strong>：业务模块用来提供各种业务，会被打成jar包的形式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;hello dubbo&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>dubbo-web模块</strong>:业务调用模块</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/sayHello&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-启动项目"><a href="#4-启动项目" class="headerlink" title="4.启动项目"></a>4.启动项目</h4><p><strong>dubbo-service模块</strong>：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211013061.png" alt="image-20211111211013061"></p>
+<p><strong>dubbo-web模块</strong>:启动使用tomcat插件进行启动</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211045941.png" alt="image-20211111211045941"></p>
+<blockquote>
+<p><strong>Q:Failed to execute goal org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:run (default-cli) on project</strong></p>
+<p>A:在pom文件的依赖中，一定要加上scope属性</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211111211251972.png" alt="image-20211111211251972"></p>
+</blockquote>
+<h4 id="5-改造"><a href="#5-改造" class="headerlink" title="5.改造"></a>5.改造</h4><p>当前项目的两个模块仍然是相互以来的，要改造成通过dubbo关联的项目，以下面这种形式。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211112100726397.png" alt="image-20211112100726397"></p>
+<blockquote>
+<p><strong>dubbo-service</strong></p>
+</blockquote>
+<p>引入tomcat插件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--tomcat插件--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">port</span>&gt;</span>9000<span class="tag">&lt;/<span class="name">port</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">path</span>&gt;</span>/<span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加Web配置，同dubbo-web的配置，去掉mvc的配置即可</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- spring --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用来扫描配置文件，加载配置文件--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath*:spring/applicationContext*.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在配置文件中添加dubbo配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--dubbo的配置--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--1.配置项目的名称,唯一--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dubbo:application</span> <span class="attr">name</span>=<span class="string">&quot;dubbo-service&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--2.配置注册中心的地址--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dubbo:registry</span> <span class="attr">address</span>=<span class="string">&quot;zookeeper://127.0.0.1:2181&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--3.配置dubbo包扫描--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dubbo:annotation</span> <span class="attr">package</span>=<span class="string">&quot;com.itheima.service.impl&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>将impl实现类的@Service注解换位dubbo的@Service注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.Service;<span class="comment">//dubbo</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><strong>dubbo-web</strong></p>
+</blockquote>
+<p>controller中的service不再是通过本地的方式调用，而是改为通过rpc的形式调用</p>
+<p>使用@Reference注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注入Service</span></span><br><span class="line"><span class="comment">//@Autowired//本地注入</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    1. 从zookeeper注册中心获取userService的访问url</span></span><br><span class="line"><span class="comment">    2. 进行远程调用RPC</span></span><br><span class="line"><span class="comment">    3. 将结果封装为一个代理对象。给变量赋值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Reference</span><span class="comment">//远程注入</span></span><br><span class="line"><span class="keyword">private</span> UserService userService;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><strong>dubbo-interface</strong></p>
+</blockquote>
+<p>将接口提取为公共的api，去掉dubbo-web和dubbo-service的中定义的接口，而是通过导入dubbo-interface模块的方式进行调用声明</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211112104624651.png" alt="image-20211112104624651"></p>
+<h3 id="安装dubbo-admin工具"><a href="#安装dubbo-admin工具" class="headerlink" title="安装dubbo-admin工具"></a>安装dubbo-admin工具</h3><h4 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h4><p>dubbo-admin管理平台，是图形化的服务管理页面</p>
+<p>从注册中心中获取到所有的提供者/消费者进行配置管理</p>
+<p>路由规则、动态配置、服务降级、访问控制、权重调整、负载均衡等管理功能</p>
+<p>dubbo-admin是一个前后端分离的项目。前端使用vue，后端使用springboot</p>
+<p>安装 dubbo-admin其实就是部署该项目</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><strong>1、环境准备</strong></p>
+<p>dubbo-admin 是一个前后端分离的项目。前端使用vue，后端使用springboot，安装 dubbo-admin 其实就是部署该项目。我们将dubbo-admin安装到开发环境上。要保证开发环境有jdk，maven，nodejs</p>
+<p>安装node**(如果当前机器已经安装请忽略)**</p>
+<p>因为前端工程是用vue开发的，所以需要安装node.js，node.js中自带了npm，后面我们会通过npm启动</p>
+<p><strong>2、下载 Dubbo-Admin</strong></p>
+<p>进入github，搜索dubbo-admin</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/apache/dubbo-admin</span><br></pre></td></tr></table></figure>
+
+<p>下载：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1578297063167.png" alt="1578297063167"></p>
+<p><strong>3、把下载的zip包解压到指定文件夹(解压到那个文件夹随意)</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1578297477356.png" alt="1578297477356"></p>
+<p><strong>4、修改配置文件</strong></p>
+<p>解压后我们进入…\dubbo-admin-develop\dubbo-admin-server\src\main\resources目录，找到 <strong>application.properties</strong> 配置文件 进行配置修改</p>
+<p><img src="E:\BaiduNetdiskDownload\资料-Dubbo\Dubbo\资料\images\1578297603008.png" alt="1578297603008"></p>
+<p>修改zookeeper地址</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1578297758655.png" alt="1578297758655"></p>
+<p>admin.registry.address注册中心<br>admin.config-center 配置中心<br>admin.metadata-report.address元数据中心</p>
+<p><strong>5、打包项目</strong></p>
+<p>在 dubbo-admin-develop 目录执行打包命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn  clean package</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135059894.png" alt="image-20211113135059894"></p>
+<p><strong>6、启动后端</strong></p>
+<p>切换到目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dubbo-Admin-develop\dubbo-admin-distribution\target&gt;</span><br></pre></td></tr></table></figure>
+
+<p>执行下面的命令启动 dubbo-admin，dubbo-admin后台由SpringBoot构建。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar .\dubbo-admin-0.1.jar</span><br></pre></td></tr></table></figure>
+
+<p><strong>7、前台后端</strong></p>
+<p>dubbo-admin-ui 目录下执行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135623086.png" alt="image-20211113135623086"></p>
+<p><strong>8、访问</strong></p>
+<p>浏览器输入。用户名密码都是root</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8081/</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211113135647602.png" alt="image-20211113135647602"></p>
+<h3 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h3><h4 id="先行：在不创建新的模块的情况下，模拟集群"><a href="#先行：在不创建新的模块的情况下，模拟集群" class="headerlink" title="先行：在不创建新的模块的情况下，模拟集群"></a>先行：在不创建新的模块的情况下，模拟集群</h4><p>修改下面两处的端口号即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;dubbo:protocol port=&quot;20882&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;dubbo:application name=&quot;dubbo-service&quot;&gt;</span><br><span class="line">   &lt;dubbo:parameter key=&quot;qos.port&quot; value=&quot;11111&quot;/&gt;</span><br><span class="line">&lt;/dubbo:application&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h4><p> 创建新的模块dubbo-pojo，模块内容是provider和consumer之间传输的对象，也是comsumer模块和provider模块需要共同依赖的部分。</p>
+<p>必须实现Serializable接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p><strong>1.maven的依赖范围 scope</strong><br>共 5 种依赖范围 , compile (编译) , test (测试) , runtime (运行时) , provided , system<br>不指定 , 则依赖范围默认为 compile</p>
+<p>compile : (编译依赖范围) , 在编译 , 测试 , 运行/打包时都会使用这个依赖</p>
+<p>test : (测试依赖范围) , 测试时会使用 , 编译 和 运行/打包 不使用 , 如 Junit</p>
+<p>runtime : (运行时依赖范围) , 测试 和 运行/打包 时需要 , 编译不需要 , 如 JDBC 驱动包</p>
+<p>provided : (已提供依赖范围) , 编译 和 测试时需要 , 运行/打包 时不需要 , 如 servlet-api</p>
+<p>system : (系统依赖范围) , 本地依赖 , 不在 maven 中央仓库 , 从参与度来说也 provided 相同 , 不过被依赖项不会从 maven 仓库抓 , 而是从本地文件系统拿 , 一定需要配合 systemPath 属性使用</p>
+<p>当 maven 依赖本地而非 repository 中的 jar 包 , sytemPath 指明本地 jar 包路径</p>
+<h2 id="依赖传递-Transitive-Dependencies"><a href="#依赖传递-Transitive-Dependencies" class="headerlink" title="依赖传递(Transitive Dependencies)"></a>依赖传递(Transitive Dependencies)</h2><p>依赖传递(Transitive Dependencies)是Maven 2.0开始的提供的特性，依赖传递的好处是不言而喻的，可以让我们不需要去寻找和发现所必须依赖的库，而是将会自动将需要依赖的库帮我们加进来。</p>
+<p>例如A依赖了B，B依赖了C和D，那么你就可以在A中，像主动依赖了C和D一样使用它们。并且传递的依赖是没有数量和层级的限制的，非常方便。</p>
+<p>但依赖传递也不可避免的会带来一些问题，例如：<br>- 当依赖层级很深的时候，可能造成循环依赖(cyclic dependency)<br>- 当依赖的数量很多的时候，依赖树会非常大</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34427614">maven</a></p>
+</blockquote>
+<h4 id="地址缓存"><a href="#地址缓存" class="headerlink" title="地址缓存"></a>地址缓存</h4><p><strong>Q:注册中心挂了，服务是否可以正常访问?</strong></p>
+<ul>
+<li>可以，因为dubbo服务消费者在第一次调用时,会将服务提供方地址缓存到本地，以后在调用则不会访问注册中心。</li>
+<li>当服务提供者地址发生变化时，注册中心会通知服务消费者。</li>
+</ul>
+<h4 id="超时"><a href="#超时" class="headerlink" title="超时"></a>超时</h4><p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211113215035749.png" alt="image-20211113215035749"></p>
+<p>服务消费者在调用服务提供者的时候发生了阻塞、等待的情形，这个时候，服务消费者会一直等待下去。</p>
+<p>在某个峰值时刻，大量的请求都在同时请求服务消费者，会造成线程的大量堆积，势必会造成雪崩。</p>
+<p>dubbo利用超时机制来解决这个问题，设置一个超时时间，在这个时间段内，无法完成服务访问，则自动断开连接。使用timeout属性配</p>
+<p>置超时时间，默认值1000，单位毫秒。</p>
+<h5 id="程序模拟请求超时"><a href="#程序模拟请求超时" class="headerlink" title="程序模拟请求超时"></a>程序模拟请求超时</h5><p><strong>dubbo-service(provider)</strong></p>
+<p>模拟请求时长为5秒，超时时长为3秒，重试0次。超时时长和重试次数在@Service注解上定义</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service(timeout = 3000,retries = 0)</span><span class="comment">//超时时长三秒，重试0次</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;hello dubbo hello!~&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">findUserById</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//模拟超时</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        User user = <span class="keyword">new</span> User(<span class="number">1</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>dubbo-web(consumer)</strong></p>
+<p>服务消费方也可以定义超时时长和超时次数，且会覆盖服务提供方定义的超时时长和超时次数。但是推荐在服务提供方处定义，服务提供方是知道请求的大致时长的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">@Reference(timeout = 1000)(consumer &gt; provider)</span></span><br><span class="line">   <span class="keyword">private</span> UserService userService;	</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@RequestMapping(&quot;/find&quot;)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> User <span class="title">find</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//开启异步，看看何时会出现异常</span></span><br><span class="line">       <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">               <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                   System.out.println(i++);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;).start();</span><br><span class="line">       <span class="keyword">return</span> userService.findUserById(id);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="重试"><a href="#重试" class="headerlink" title="重试"></a>重试</h4><p>设置了超时时间，在这个时间段内，无法完成服务访问，则自动断开连接。</p>
+<p>如果出现网络抖动，则这一次请求就会失败。</p>
+<p>Dubbo提供重试机制来避免类似问题的发生。</p>
+<p>通过retries属性来设置重试次数。默认为2次。</p>
+<h4 id="多版本"><a href="#多版本" class="headerlink" title="多版本"></a>多版本</h4><p>老版本</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114133943645.png" alt="image-20211114133943645"></p>
+<p>灰度发布:当出现新功能时，会让一部分用户先使用新功能</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114134006514.png" alt="image-20211114134006514"></p>
+<p>用户反馈没问题时，再将所有用户迁移到新功能。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114133747272.png" alt="image-20211114133747272"></p>
+<p>dubbo中使用version属性来设置和调用同一个接口的不同版本</p>
+<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><p><strong>dubbo-service</strong></p>
+<p>服务提供方添加新的实现，并且定义版本号</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service(version = &quot;v2.0&quot;)</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>dubbo-web</strong></p>
+<p>服务消费方选择不同版本的实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Reference(version = &quot;v2.0&quot;)</span></span><br><span class="line"><span class="keyword">private</span> UserService userService;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="复制均衡"><a href="#复制均衡" class="headerlink" title="复制均衡"></a>复制均衡</h4><p>在集群负载均衡时，Dubbo 提供了多种均衡策略，缺省为 <code>random</code> 随机调用。</p>
+<p>具体实现上，Dubbo 提供的是客户端负载均衡，即由 Consumer 通过负载均衡算法得出</p>
+<p>需要将请求提交到哪个 Provider 实例。</p>
+<p><a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/docs/advanced/loadbalance/">官方文档</a></p>
+<p>负载均衡策略(4种):</p>
+<ul>
+<li><p>Random:按权重随机，默认值。按权重设置随机概率</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114140324573.png" alt="image-20211114140324573"></p>
+</li>
+<li><p>RoundRobin:按权重轮询。</p>
+<p><img src="D:\Typoramd\Dubbo&zookeeper\Dubbo&zookeeper.assets\image-20211114140324573.png" alt="image-20211114140324573"></p>
+</li>
+<li><p>LeastActive:最少活跃调用数，相同活跃数的随机。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114140249825.png" alt="image-20211114140249825"></p>
+</li>
+<li><p>ConsistentHash:一致性Hash，相同参数的请求<br>总是发到同一提供者。</p>
+<p><img src="D:\Typoramd\Dubbo&zookeeper\Dubbo&zookeeper.assets\image-20211114140113741.png?lastModify=1637231698" alt="image-20211114140113741"></p>
+</li>
+</ul>
+<h4 id="集群容错模式"><a href="#集群容错模式" class="headerlink" title="集群容错模式"></a>集群容错模式</h4><p>集群调用失败时，Dubbo 提供的容错方案</p>
+<p>在集群调用失败时，Dubbo 提供了多种容错方案，缺省为 failover 重试。</p>
+<p><a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/docs/advanced/fault-tolerent-strategy/">官方文档</a></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114141233035.png" alt="image-20211114141233035"></p>
+<p><strong>集群容错模式</strong></p>
+<p>Failover Cluster</p>
+<p>失败自动切换，当出现失败，重试其它服务器。通常用于读操作，但重试会带来更长延迟。可通过 <code>retries=&quot;2&quot;</code> 来设置重试次数(不含第一次)。</p>
+<p>Failfast Cluster</p>
+<p>快速失败，只发起一次调用，失败立即报错。通常用于非幂等性的写操作，比如新增记录。</p>
+<p>Failsafe Cluster</p>
+<p>失败安全，出现异常时，直接忽略。通常用于写入审计日志等操作。</p>
+<p>Failback Cluster</p>
+<p>失败自动恢复，后台记录失败请求，定时重发。通常用于消息通知操作。</p>
+<p>Forking Cluster</p>
+<p>并行调用多个服务器，只要一个成功即返回。通常用于实时性要求较高的读操作，但需要浪费更多服务资源。可通过 <code>forks=&quot;2&quot;</code> 来设置最大并行数。</p>
+<p>Broadcast Cluster</p>
+<p>广播调用所有提供者，逐个调用，任意一台报错则报错。通常用于通知所有提供者更新缓存或日志等本地资源信息。</p>
+<h4 id="服务降级"><a href="#服务降级" class="headerlink" title="服务降级"></a>服务降级</h4><p>可以通过服务降级功能临时屏蔽某个出错的非关键服务，并定义降级后的返回策略。</p>
+<p>向注册中心写入动态配置覆盖规则：</p>
+<ul>
+<li><p><code>mock=force:return null</code> 表示消费方对该服务的方法调用都直接返回 null 值，不</p>
+<p>发起远程调用。用来屏蔽不重要服务不可用时对调用方的影响。</p>
+</li>
+<li><p>还可以改为 <code>mock=fail:return null</code> 表示消费方对该服务的方法调用在失败后，再</p>
+<p>返回 null 值，不抛异常。用来容忍不重要服务不稳定时对调用方的影响。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Reference(mock = &quot;force:return null&quot;)</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h1><p>文档：<a target="_blank" rel="noopener" href="https://zookeeper.readthedocs.io/zh/latest/intro.html">https://zookeeper.readthedocs.io/zh/latest/intro.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.dba.cn/book/zookeeper/ZOOKEEPERZhongWenShouCe/ZOOKEEPERCLI.html">http://www.dba.cn/book/zookeeper/ZOOKEEPERZhongWenShouCe/ZOOKEEPERCLI.html</a></p>
+<p><strong>总结的很好的zookeeper文档：</strong><a target="_blank" rel="noopener" href="https://xiaoxiami.gitbook.io/zookeeper/">https://xiaoxiami.gitbook.io/zookeeper/</a></p>
+<h3 id="ZK简介"><a href="#ZK简介" class="headerlink" title="ZK简介"></a>ZK简介</h3><p>Zookeeper是 Apache Hadoop项目下的一个子项目，是一个树形目录服务。</p>
+<p>Zookeeper翻译过来就是动物园管理员，他是用来管Hadoop(大象)、Hive(蜜蜂)、Pig(小猪)的管理员。简称zk</p>
+<p>Zookeeper是一个分布式的、开源的分布式应用程序的协调服务。</p>
+<p>Zookeeper提供的主要功能包括:</p>
+<p>​            配置管理</p>
+<p>​            分布式锁</p>
+<p>​            集群管理</p>
+<h3 id="Zookeeper安装"><a href="#Zookeeper安装" class="headerlink" title="Zookeeper安装"></a>Zookeeper安装</h3><h4 id="Linux安装"><a href="#Linux安装" class="headerlink" title="Linux安装"></a>Linux安装</h4><h5 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h5><p><strong>1、环境准备</strong></p>
+<p>ZooKeeper服务器是用Java创建的，它运行在JVM之上。需要安装JDK 7或更高版本。</p>
+<p><strong>2、上传</strong></p>
+<p>将下载的ZooKeeper放到/opt/ZooKeeper目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">打开 opt目录</span></span><br><span class="line">cd /opt</span><br><span class="line"><span class="meta">#</span><span class="bash">创建zooKeeper目录</span></span><br><span class="line">mkdir  zooKeeper</span><br><span class="line"><span class="meta">#</span><span class="bash">上传zookeeper xftp上传到Linux服务器</span></span><br><span class="line">opt/zookeeper/apache-zookeeper-3.5.6-bin.tar.gz</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Q:xftp上传出现错误，没有权限向opt目录传文件</p>
+<p>A:修改文件权限即可 chmod 777 zookeeper/</p>
+</blockquote>
+<p><strong>3、解压</strong></p>
+<p>将tar包解压到/opt/zookeeper目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-ZooKeeper-3.5.6-bin.tar.gz </span><br></pre></td></tr></table></figure>
+
+<h5 id="配置启动"><a href="#配置启动" class="headerlink" title="配置启动"></a>配置启动</h5><p><strong>1、配置zoo.cfg</strong></p>
+<p>进入到conf目录拷贝一个zoo_sample.cfg并完成配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">进入到conf目录</span></span><br><span class="line">cd /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/conf/</span><br><span class="line"><span class="meta">#</span><span class="bash">拷贝</span></span><br><span class="line">cp  zoo_sample.cfg  zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<p>修改zoo.cfg</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">打开目录</span></span><br><span class="line">cd /opt/zooKeeper/</span><br><span class="line"><span class="meta">#</span><span class="bash">创建zooKeeper存储目录</span></span><br><span class="line">mkdir  zkdata</span><br><span class="line"><span class="meta">#</span><span class="bash">修改zoo.cfg</span></span><br><span class="line">vim /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1577548250377.png" alt="1577548250377"></p>
+<p>修改存储目录：dataDir=/opt/zookeeper/zkdata</p>
+<p><strong>2、启动ZooKeeper</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/zooKeeper/apache-zooKeeper-3.5.6-bin/bin/</span><br><span class="line"><span class="meta">#</span><span class="bash">启动</span></span><br><span class="line"> ./zkServer.sh  start</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1577548052037.png" alt="1577548052037"></p>
+<p>看到上图表示ZooKeeper成功启动</p>
+<p><strong>3、查看ZooKeeper状态</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
+
+<p>zookeeper启动成功。standalone代表zk没有搭建集群，现在是单节点</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1577548175232.png" alt="1577548175232"></p>
+<p>zookeeper没有启动</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/1577548112773.png" alt="1577548112773"></p>
+<blockquote>
+<p>Q:./zkServer.sh status</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">/usr/bin/java</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">ZooKeeper JMX enabled by default</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Using config: /opt/zookeeper/apache-zookeeper-3.7.0-bin/bin/../conf/zoo.cfg</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Client port found: 2181. Client address: localhost. Client SSL: <span class="literal">false</span>.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Error contacting service. It is probably not running.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"><span class="comment">#zookeeper未正常启动</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">./zkServer.sh start-foreground  查看日志输出</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">Unable to start AdminServer, exiting abnormally</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">org.apache.zookeeper.server.admin.AdminServer<span class="variable">$AdminServerException</span>: Problem starting AdminServer on address 0.0.0.0, port 8080 and <span class="built_in">command</span> URL /commands</span></span><br><span class="line">at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:179)</span><br><span class="line">at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:155)</span><br><span class="line">at org.apache.zookeeper.server.ZooKeeperServerMain.initializeAndRun(ZooKeeperServerMain.java:113)</span><br><span class="line">at org.apache.zookeeper.server.ZooKeeperServerMain.main(ZooKeeperServerMain.java:68)</span><br><span class="line">at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:141)</span><br><span class="line">at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Caused by: java.io.IOException: Failed to <span class="built_in">bind</span> to /0.0.0.0:8080</span></span><br><span class="line">at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)</span><br><span class="line">at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)</span><br><span class="line">at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)</span><br><span class="line">at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)</span><br><span class="line">at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)</span><br><span class="line">at org.eclipse.jetty.server.Server.doStart(Server.java:401)</span><br><span class="line">at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)</span><br><span class="line">at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:170)</span><br><span class="line">... 5 more</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Caused by: java.net.BindException: Address already <span class="keyword">in</span> use</span></span><br><span class="line">at sun.nio.ch.Net.bind0(Native Method)</span><br><span class="line">at sun.nio.ch.Net.bind(Net.java:461)</span><br><span class="line">at sun.nio.ch.Net.bind(Net.java:453)</span><br><span class="line">at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:222)</span><br><span class="line">at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:85)</span><br><span class="line">at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)</span><br><span class="line">... 12 more</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Unable to start AdminServer, exiting abnormally</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"><span class="comment">#8080端口被占用</span></span></span><br></pre></td></tr></table></figure>
+
+<p>这是Zookeeper AdminServer，默认使用8080端口，它的配置属性如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12540413-d5924f70213774e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/882/format/webp" alt="img"></p>
+<p><strong>解决办法：</strong>修改端口即可</p>
+<p>我们可以修改在zoo.cfg中修改AdminServer的端口：</p>
+<p>保存后，再次启动，Zookeeper启动成功。</p>
+</blockquote>
+<h4 id="windows安装"><a href="#windows安装" class="headerlink" title="windows安装"></a>windows安装</h4><p>官网下载，解压，使用7-zip解压为tar，再解压一遍即可</p>
+<p>将conf文件夹的配置文件改为zoo.cfg，并做如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000               # 最小时间单位, 最小的会话超时为两倍 tickTime,建议设置长一些</span><br><span class="line">dataDir=../data             # 数据目录, 需要存在且开始的时候为空</span><br><span class="line">clientPort=2181             # 客户端连接的监听端口</span><br></pre></td></tr></table></figure>
+
+<p>进入解压后端zookeeper的bin目录，找到zkServer.cmd启动即可</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211112103019426.png" alt="image-20211112103019426"></p>
+<p>使用zkCli.cmd链接zk服务端，出现下面表示链接成功</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114152013152.png" alt="image-20211114152013152"></p>
+<h3 id="ZooKeeper数据模型"><a href="#ZooKeeper数据模型" class="headerlink" title="ZooKeeper数据模型"></a>ZooKeeper数据模型</h3><ul>
+<li><p>ZooKeeper是一个树形目录服务,其数据模型和Unix的文件系统目录树很类似，拥有一个层次化结构。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114150412939.png" alt="image-20211114150412939"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/zknamespace.jpg" alt="_images/zknamespace.jpg"></p>
+<p>名字是一个用斜杆(/)分隔的路径元素序列, ZK 中每一个节点(znode)都用路径标识。</p>
+</li>
+<li><p>这里面的每一个节点都被称为:ZNode，和文件系统不同, ZK 中的节点可以拥有数据和子节点。ZK 被设计来存储协调数据: 状态信息、配置、位置信息等, 所以数据通常很小(byte 到 kilobyte 之间)。</p>
+</li>
+<li><p>节点可以分为四大类:</p>
+<ul>
+<li>持久节点（PERSISTENT）<br>所谓持久节点，是指在节点创建后，就一直存在，直到有删除操作来主动清除这个节点——不会因为创建该节点的客户端会话失效而消失。</li>
+<li>持久顺序节点（PERSISTENT_SEQUENTIAL）<br>这类节点的基本特性和上面的节点类型是一致的。额外的特性是，在ZK中，每个父节点会为他的第一级子节点维护一份时序，会记录每个子节点创建的先后顺序。基于这个特性，在创建子节点的时候，可以设置这个属性，那么在创建节点过程中，ZK会自动为给定节点名加上一个数字后缀，作为新的节点名。这个数字后缀的范围是整型的最大值。<br>在创建节点的时候只需要传入节点 “/test_”，这样之后，zookeeper自动会给”test_”后面补充数字。</li>
+<li>临时节点（EPHEMERAL）<br>和持久节点不同的是，临时节点的生命周期和客户端会话绑定。也就是说，如果客户端会话失效，那么这个节点就会自动被清除掉。注意，这里提到的是会话失效，而非连接断开。另外，在临时节点下面不能创建子节点。<br>这里还要注意一件事，就是当你客户端会话失效后，所产生的节点也不是一下子就消失了，也要过一段时间，大概是10秒以内，可以试一下，本机操作生成节点，在服务器端用命令来查看当前的节点数目，你会发现客户端已经stop，但是产生的节点还在。</li>
+<li>临时顺序节点（EPHEMERAL_SEQUENTIAL）<br>此节点是属于临时节点，不过带有顺序，客户端会话结束节点就消失。下面是一个利用该特性的分布式锁的案例流程。<br>(1)客户端调用create()方法创建名为“locknode/<br>guid-lock-”的节点，需要注意的是，这里节点的创建类型需要设置为EPHEMERAL_SEQUENTIAL。<br>(2)客户端调用getChildren(“locknode”)方法来获取所有已经创建的子节点，注意，这里不注册任何Watcher。<br>(3)客户端获取到所有子节点path之后，如果发现自己在步骤1中创建的节点序号最小，那么就认为这个客户端获得了锁。<br>(4)如果在步骤3中发现自己并非所有子节点中最小的，说明自己还没有获取到锁。此时客户端需要找到比自己小的那个节点，然后对其调用exist()方法，同时注册事件监听。<br>(5)之后当这个被关注的节点被移除了，客户端会收到相应的通知。这个时候客户端需要再次调用getChildren(“locknode”)方法来获取所有已经创建的子节点，确保自己确实是最小的节点了，然后进入步骤3。</li>
+</ul>
+</li>
+</ul>
+<p>节点更加详细的介绍：<a target="_blank" rel="noopener" href="https://zookeeper.readthedocs.io/zh/latest/intro.html#ephemeral-nodes">https://zookeeper.readthedocs.io/zh/latest/intro.html#ephemeral-nodes</a></p>
+<h3 id="Zookeeper命令"><a href="#Zookeeper命令" class="headerlink" title="Zookeeper命令"></a>Zookeeper命令</h3><p>以下是基本操作命令</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115092727992.png" alt="image-20211115092727992"></p>
+<h4 id="Server端命令"><a href="#Server端命令" class="headerlink" title="Server端命令"></a>Server端命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动服务端</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> bin/zkServer.sh start</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看状态</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> bin/zkServer.sh status</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 停止</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> bin/zkServer.sh stop</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> bin/zkServer.sh restart</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Client端命令"><a href="#Client端命令" class="headerlink" title="Client端命令"></a>Client端命令</h4><p>连接ZooKeeper服务端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkCli.sh -server ip:port</span><br></pre></td></tr></table></figure>
+
+<p>断开连接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<p>设置节点值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set /节点path value</span><br></pre></td></tr></table></figure>
+
+<p>查看命令帮助</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">help</span><br></pre></td></tr></table></figure>
+
+<p>删除单个节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete / 节点path</span><br></pre></td></tr></table></figure>
+
+<p>显示指定目录下节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls目录</span><br></pre></td></tr></table></figure>
+
+<p>删除带有子节点的节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deleteall /节点path</span><br></pre></td></tr></table></figure>
+
+<p>创建节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create /节点path value</span><br></pre></td></tr></table></figure>
+
+<p>获取节点值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get /节点path</span><br></pre></td></tr></table></figure>
+
+<p>创建临时节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create -e /节点path value</span><br></pre></td></tr></table></figure>
+
+<p>创建顺序节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create -s /节点path value</span><br></pre></td></tr></table></figure>
+
+<p>查询节点详细信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -s/节点path</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ls可以查看到的节点的信息</p>
+<p><img src="D:\Typoramd\Dubbo&zookeeper\Dubbo&zookeeper.assets\image-20211114191048713.png" alt="image-20211114191048713"></p>
+</blockquote>
+<p><strong>详细命令</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211114190236967.png" alt="image-20211114190236967"></p>
+<h3 id="Zookeeper的ACL权限控制"><a href="#Zookeeper的ACL权限控制" class="headerlink" title="Zookeeper的ACL权限控制"></a>Zookeeper的ACL权限控制</h3><h4 id="ACL权限控制"><a href="#ACL权限控制" class="headerlink" title="ACL权限控制"></a>ACL权限控制</h4><p>zk做为分布式架构中的重要中间件，通常会在上面以节点的方式存储一些关键信息，默认情况下，所有应用都可以读写任何节点，在复杂的应用中，这不太安全，ZK通过ACL机制来解决访问权限问题，详见官网文档：</p>
+<p><a target="_blank" rel="noopener" href="http://zookeeper.apache.org/doc/r3.4.6/zookeeperProgrammers.html#sc_ZooKeeperAccessControl">http://zookeeper.apache.org/doc/r3.4.6/zookeeperProgrammers.html#sc_ZooKeeperAccessControl</a></p>
+<p>类似linux针对文件的权限控制</p>
+<p><strong>ACL权限控制使用scheme(身份认证)：id（授权对象）：permission（授予的权限）</strong></p>
+<ol>
+<li><p>身份的认证有4种方式：</p>
+<p>world：world下只有一个id，即只有一个用户，也就是anyone，那么组合的写法就是<code>world:anyone:[permissions]</code></p>
+<p>auth：代表已经认证通过的用户(cli中可以通过addauth digest user:pwd 来添加当前上下文中的授权用户)</p>
+<p>digest：需要对密码加密才能访问，组合形式为<code>digest:username:BASE64(SHA1(password)):[permissions]</code></p>
+<p>ip：当设置为ip指定的ip地址，此时限制ip进行访问，比如<code>ip:192.168.1.1:[permissions]</code></p>
+<p>super：代表超级管理员，拥有所有的权限。</p>
+</li>
+<li><p>id（授权对象）</p>
+</li>
+<li><p>ZK的节点有5种操作权限</p>
+<ul>
+<li>create 简写c 可以创建子结点</li>
+<li>delete 简写d 可以删除子结点（仅下一级）</li>
+<li>read 简写r 可以读取结点数据以及显示子结点</li>
+<li>write 简写w 可以设置结点数据</li>
+<li>admin 简写a 可以设置节点访问控制列表权限</li>
+</ul>
+</li>
+</ol>
+<h4 id="ACL命令行"><a href="#ACL命令行" class="headerlink" title="ACL命令行"></a>ACL命令行</h4><p>getAcl：获取某个节点的acl权限信息，语法：<code>getAcl path</code></p>
+<p>setAcl：设置某个节点的acl权限信息,语法：<code>setAcl path</code></p>
+<p>addauth：输入认证权限信息，注册时输入明文密码（登录），但是在zk的系统里，密码是以加密的形式存在的。语法：<code>addauth scheme auth</code></p>
+<h4 id="ACL权限控制四种模式"><a href="#ACL权限控制四种模式" class="headerlink" title="ACL权限控制四种模式"></a>ACL权限控制四种模式</h4><h5 id="world授权模式"><a href="#world授权模式" class="headerlink" title="world授权模式"></a><strong>world授权模式</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setAcl path world:anyone:&lt;acl&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如取消c创建权限，就不能再创建子结点</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118131807231.png" alt="image-20211118131807231"></p>
+<h5 id="ip授权模式"><a href="#ip授权模式" class="headerlink" title="ip授权模式"></a><strong>ip授权模式</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setAcl path ip:&lt;ip&gt;:&lt;acl&gt;</span><br></pre></td></tr></table></figure>
+
+<p>要用两个虚拟机</p>
+<h5 id="digest模式"><a href="#digest模式" class="headerlink" title="digest模式"></a><strong>digest模式</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setAcl path digest:&lt;username&gt;:&lt;BASE64(SHA1(password))&gt;:&lt;acl&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>getAcl path</code> 读取权限</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118124529642.png" alt="image-20211118124529642"></p>
+<p>通过getAcl命令可以发现，刚创建的节点，默认是 world,anyone的认证方式，具有cdrwa所有权限</p>
+</li>
+<li><p><code>setAcl path digest:&lt;username&gt;:&lt;BASE64(SHA1(password))&gt;:&lt;acl&gt;</code> 设置权限</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118124939417.png" alt="image-20211118124939417"></p>
+<p>permission是先给/app1增加了user1:+owfoSBn/am19roBPzR1/MfCblE的只读(r)权限控制</p>
+<p>说明：setAcl /test digest:用户名:密码:权限 给节点设置ACL访问权限时，密码必须是加密后的内容，这里的+owfoSBn/am19roBPzR1/MfCblE=，对应的原文是12345 (至于这个密文怎么得来的，后面会讲到，这里先不管这个)，设置完Acl后，可以通过getAcl /节点路径 查看Acl设置然后get /app1时，提示认证无效，说明访问控制起作用了</p>
+</li>
+<li><p><code>addauth digest &lt;user&gt;:&lt;password&gt;</code> 添加认证用户</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118130023454.png" alt="image-20211118130023454"></p>
+<p>addauth digest user1:12345 给”上下文”增加了一个认证用户，即对应刚才setAcl的设置</p>
+<p>然后再 get /app1 就能取到数据了</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118130303572.png" alt="image-20211118130303572"></p>
+</li>
+</ul>
+<p><strong>加密</strong></p>
+<p>这里的密码是经过SHA1及BASE64处理的密文</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hecs-x-medium-2-linux-20211114163803 bin]#  echo -n user1:12345 | openssl dgst -binary -sha1 | openssl base64</span><br><span class="line">+owfoSBn/am19roBPzR1/MfCblE=  #加密后端密码</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="auth模式"><a href="#auth模式" class="headerlink" title="auth模式"></a><strong>auth模式</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addauth digest &lt;user&gt;:&lt;password&gt; `添加认证用户,password为加密后的密码`</span><br><span class="line">setAcl &lt;path&gt; auth:&lt;user&gt;:&lt;acl&gt; 	` 授权</span><br></pre></td></tr></table></figure>
+
+<p>刚才也提到了，setAcl /path digest这种方式，必须输入密码加密后的值，这在cli控制台上很不方便，所以下面这种方式更常用：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118131342498.png" alt="image-20211118131342498"></p>
+<p>先用addauth digest user1:12345 增加一个认证用户，然后用 setAcl /app1 auth:user1:12345:r 设置权限，跟刚才的效果一样，但是密码这里输入的是明文，控制台模式下手动输入更方便。</p>
+<h5 id="多权限模式"><a href="#多权限模式" class="headerlink" title="多权限模式"></a>多权限模式</h5><p>同一个结点可以使用多种授权模式，用逗号隔开就行，</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141013483.png" alt="image-20211118141013483"></p>
+<h4 id="节点间ACL关系（待补充）"><a href="#节点间ACL关系（待补充）" class="headerlink" title="节点间ACL关系（待补充）"></a>节点间ACL关系（待补充）</h4><p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118134147402.png" alt="image-20211118134147402"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118134207349.png" alt="image-20211118134207349"></p>
+<p>从这张图上可以发现，子节点/test/app1的控制权限范围可以超出父节点的范围（仅限：父节点具有read/admin权限）</p>
+<h4 id="ACL权限小总结"><a href="#ACL权限小总结" class="headerlink" title="ACL权限小总结"></a>ACL权限小总结</h4><p>要修改某个节点的ACL属性，必须具有read、admin二种权限</p>
+<p>要删除某个节点下的子节点，必须具有对父节点的read权限，以及父节点的delete权限</p>
+<blockquote>
+<h4 id="因为没设置权限导致的节点无法删除"><a href="#因为没设置权限导致的节点无法删除" class="headerlink" title="因为没设置权限导致的节点无法删除"></a>因为没设置权限导致的节点无法删除</h4><p>Q:遇到了节点设置了权限，但是没有设置可以删除的权限，导致节点无法删除</p>
+<p>A:假设超级管理员的账号是super:admin，先要为其生成密文：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141306373.png" alt="image-20211118141306373"></p>
+<p>得到密文<code>xQJmxLMiHGwaqBvst5y6rkB6HQs=</code></p>
+<p>在zookeeper目录下/bin/zkServer.sh服务器脚本文件，找到这一行</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141403483.png" alt="image-20211118141403483"></p>
+<p><code>&quot;-Dzookeeper.DigestAuthenticationProvider.superDigest=super:xQJmxLMiHGwaqBvst5y6rkB6HQs=&quot;</code>加入这一句，这里已经加好了。</p>
+<p>重启zookeeper就可以了</p>
+<p>使用客户端登陆，添加管理员<code>addauth digest super:admin</code>,这样就可以删除了</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211118141611250.png" alt="image-20211118141611250"></p>
+</blockquote>
+<h3 id="Zookeeper-Java-API"><a href="#Zookeeper-Java-API" class="headerlink" title="Zookeeper Java API"></a>Zookeeper Java API</h3><h4 id="Apache-Curator简介"><a href="#Apache-Curator简介" class="headerlink" title="Apache Curator简介"></a>Apache Curator简介</h4><ul>
+<li>Curator是ApacheZooKeeper的Java客户端库。</li>
+<li>常见的ZooKeeper Java APl :<ul>
+<li>原生JavaAPl</li>
+<li>ZkClient</li>
+<li>Curator</li>
+</ul>
+</li>
+<li>Curator项目的目标是简化ZooKeeper客户端的使用，原生JavaAPI不好用。</li>
+<li>Curator最初是Netfix研发的,后来捐献了Apache基金会,目前是Apache的顶级项目。</li>
+<li>官网: <a target="_blank" rel="noopener" href="http://curator.apache.orgl/">http://curator.apache.orgl</a></li>
+</ul>
+<h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>两种创建CuratorFramework方式</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115192919579.png" alt="image-20211115192919579"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> CuratorFramework curatorFramework;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 建立zk链接</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="comment">//在所有Test方法前执行</span></span><br><span class="line">   <span class="meta">@Before</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">       RetryNTimes retryNTimes = <span class="keyword">new</span> RetryNTimes(<span class="number">3</span>, <span class="number">3000</span>);</span><br><span class="line">       <span class="comment">/*</span></span><br><span class="line"><span class="comment">        *</span></span><br><span class="line"><span class="comment">        * @param connectString       链接地址，链接字符串</span></span><br><span class="line"><span class="comment">        * @param sessionTimeoutMs    会话超时时间</span></span><br><span class="line"><span class="comment">        * @param connectionTimeoutMs 链接超时时间</span></span><br><span class="line"><span class="comment">        * @param retryPolicy         重试策略，像超时时间或者重试次数</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">       <span class="comment">//第一种方式创建链接</span></span><br><span class="line">       curatorFramework = CuratorFrameworkFactory.newClient(<span class="string">&quot;124.70.145.43:2181&quot;</span>, retryNTimes);</span><br><span class="line"></span><br><span class="line">       <span class="comment">//第二种方式创建链接</span></span><br><span class="line">       <span class="comment">/*CuratorFramework curatorFramework1 = CuratorFrameworkFactory.builder()</span></span><br><span class="line"><span class="comment">               .connectString(&quot;124.70.145.43:2181&quot;)</span></span><br><span class="line"><span class="comment">               .sessionTimeoutMs(5000)</span></span><br><span class="line"><span class="comment">               .connectionTimeoutMs(5000)</span></span><br><span class="line"><span class="comment">               .retryPolicy(retryNTimes)</span></span><br><span class="line"><span class="comment">               //统一命名空间，当前会话都会在/wzy这个节点下创建</span></span><br><span class="line"><span class="comment">               .namespace(&quot;wzy&quot;).build();*/</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//开启链接</span></span><br><span class="line">       curatorFramework.start();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h4><p>curatorFramework是已经创建好的Client</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 创建节点  create  持久，临时，顺序</span></span><br><span class="line"><span class="comment">   * 1.基本创建</span></span><br><span class="line"><span class="comment">   * 2.创建带数据的节点</span></span><br><span class="line"><span class="comment">   * 3.设置节点的类型</span></span><br><span class="line"><span class="comment">   * 4.创建多级节点</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">TestCreate</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">      <span class="comment">//1.基本创建，默认将客户端的ip地址作为默认数据</span></span><br><span class="line">      String path = curatorFramework.create().forPath(<span class="string">&quot;/app1&quot;</span>);</span><br><span class="line">      <span class="comment">//2.创建带数据的节点</span></span><br><span class="line">      String path1 = curatorFramework.create().forPath(<span class="string">&quot;/app2&quot;</span>, <span class="string">&quot;hello&quot;</span>.getBytes());</span><br><span class="line">      <span class="comment">//3.创建临时节点</span></span><br><span class="line">      <span class="comment">//withMode(临时节点类型)</span></span><br><span class="line">      String path2 = curatorFramework.create().withMode(CreateMode.CONTAINER).forPath(<span class="string">&quot;/app3&quot;</span>, <span class="string">&quot;hello&quot;</span>.getBytes());</span><br><span class="line">      <span class="comment">//4.创建多级节点</span></span><br><span class="line">      <span class="comment">//creatingParentsIfNeeded()用来创建父级节点</span></span><br><span class="line">      String path4 = curatorFramework.create().creatingParentsIfNeeded().forPath(<span class="string">&quot;/app4&quot;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查询节点"><a href="#查询节点" class="headerlink" title="查询节点"></a>查询节点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取节点信息</span></span><br><span class="line"><span class="comment"> * 1.查询节点数据</span></span><br><span class="line"><span class="comment"> * 2.查询节点链表</span></span><br><span class="line"><span class="comment"> * 3.查询节点状态</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get1</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//获取节点数据</span></span><br><span class="line">    <span class="keyword">byte</span>[] bytes = curatorFramework.getData().forPath(<span class="string">&quot;/app2&quot;</span>);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(bytes));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//获取节点的子节点</span></span><br><span class="line">    List&lt;String&gt; list = curatorFramework.getChildren().forPath(<span class="string">&quot;/app4&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get3</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//节点状态信息</span></span><br><span class="line">    Stat status = <span class="keyword">new</span> Stat();</span><br><span class="line">    System.out.println(status);</span><br><span class="line">    curatorFramework.getData().storingStatIn(status).forPath(<span class="string">&quot;/app2&quot;</span>);</span><br><span class="line">    System.out.println(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="修改节点"><a href="#修改节点" class="headerlink" title="修改节点"></a>修改节点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 修改数据</span></span><br><span class="line"><span class="comment"> * 1.修改数据</span></span><br><span class="line"><span class="comment"> * 2.根据版本号来修改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNormal</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    curatorFramework.setData().forPath(<span class="string">&quot;/app2&quot;</span>, <span class="string">&quot;hi&quot;</span>.getBytes());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过判断version来进行修改，毕竟可能不止一个客户端想要修改节点的数据，要保证查询的原子性</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setByVersion</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    Stat status = <span class="keyword">new</span> Stat();</span><br><span class="line">    <span class="comment">//节点的版本是通过查询得到的</span></span><br><span class="line">    curatorFramework.getData().storingStatIn(status).forPath(<span class="string">&quot;/app2&quot;</span>);</span><br><span class="line"></span><br><span class="line">    curatorFramework.setData().withVersion(status.getVersion()).forPath(<span class="string">&quot;/app2&quot;</span>, <span class="string">&quot;hihi&quot;</span>.getBytes());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 删除操作</span></span><br><span class="line"><span class="comment">    * 1.删除节点</span></span><br><span class="line"><span class="comment">    * 2.删除带有子节点的</span></span><br><span class="line"><span class="comment">    * 3.必须删除成功的</span></span><br><span class="line"><span class="comment">    * 4.带有回调函数的</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDelete</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">       <span class="comment">//常规删除</span></span><br><span class="line">       curatorFramework.delete().forPath(<span class="string">&quot;/app1&quot;</span>);</span><br><span class="line">       <span class="comment">//删除带有子节点的</span></span><br><span class="line">       curatorFramework.delete().deletingChildrenIfNeeded().forPath(<span class="string">&quot;/app4&quot;</span>);</span><br><span class="line">       <span class="comment">//必须删除成功的</span></span><br><span class="line">       curatorFramework.delete().guaranteed().forPath(<span class="string">&quot;/app1&quot;</span>);</span><br><span class="line">       <span class="comment">//带有回调函数的删除</span></span><br><span class="line">       curatorFramework.delete().inBackground(<span class="keyword">new</span> BackgroundCallback() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processResult</span><span class="params">(CuratorFramework client, CuratorEvent event)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">               System.out.println(<span class="string">&quot;已删除&quot;</span>);</span><br><span class="line">               System.out.println(event);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;).forPath(<span class="string">&quot;/app1&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 释放连接资源</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@After</span><span class="comment">//所有Test单元模块执行完成之后再执行</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       curatorFramework.close();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Watcher事件监听"><a href="#Watcher事件监听" class="headerlink" title="Watcher事件监听"></a>Watcher事件监听</h4><p>ZooKeeper允许用户在指定节点上注册一些Watcher，并且在一些特定事件触发的时候，ZooKeeper服务端会将事件通知到感兴趣的客户</p>
+<p>端上去，该机制是ZooKeeper实现分布式协调服务的重要特性。</p>
+<p>ZooKeeper中引入了Watcher机制来实现了发布/订阅功能能，能够让多个订阅者同时监听某一个对象，当一个对象自身状态变化时，会</p>
+<p>通知所有订阅者。</p>
+<p>ZooKeeper 原生支持通过注册Watcher来进行事件监听，但是其使用并不是特别方便，需要开发人员自己反复注册Watcher，比较繁琐。</p>
+<p>Curator引入了Cache来实现对ZooKeeper服务端事件的监听。</p>
+<p><strong>ZooKeeper提供了三种Watcher:</strong></p>
+<ul>
+<li><del>NodeCache:只是监听某一个特定的节点</del></li>
+<li><del>PathChildrenCache:监控一个ZNode的子节点.</del></li>
+<li><del>TreeCache:可以监控整个树上的所有节点，类似于PathChildrenCache和NodeCache的组合</del></li>
+</ul>
+<p>目前这三个方法在5.0以上版的Gurator中均标识位废弃，新的Watcher类<strong>CuratorCache</strong></p>
+<p>通过静态方法获取<strong>CuratorCache</strong>对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> CuratorCache <span class="title">build</span><span class="params">(CuratorFramework client, String path, Options... options)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> builder(client, path).withOptions(options).build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>curatorCache.listenable().addListener()传入的监听器接口，重写event函数即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CuratorCacheListener</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * An enumerated type that describes a change</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">Type</span></span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * A new node was added to the cache</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        NODE_CREATED,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * A node already in the cache has changed</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        NODE_CHANGED,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * A node already in the cache was deleted</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        NODE_DELETED</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 第一个参数：事件类型（枚举）</span></span><br><span class="line">     <span class="comment">// 第二个参数：节点更新前的状态、数据</span></span><br><span class="line">     <span class="comment">// 第三个参数：节点更新后的状态、数据</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">event</span><span class="params">(Type type, ChildData oldData, ChildData data)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * When the cache is started, the initial nodes are tracked and when they are finished loading</span></span><br><span class="line"><span class="comment">     * into the cache this method is called.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">initialized</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// NOP</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Returns a builder allowing type specific, and special purpose listeners.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> builder</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> CuratorCacheListenerBuilder <span class="title">builder</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CuratorCacheListenerBuilderImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>具体代码使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWatcher</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//创建Watcher</span></span><br><span class="line">        CuratorCache curatorCache = CuratorCache.build(curatorFramework, <span class="string">&quot;/app1&quot;</span>);</span><br><span class="line">        curatorCache.listenable().addListener(<span class="keyword">new</span> CuratorCacheListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">event</span><span class="params">(Type type, ChildData oldData, ChildData data)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;NODE_CREATED&quot;</span>.equals(type.name())) &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;创建了新的节点&quot;</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;NODE_CHANGED&quot;</span>.equals(type.name())) &#123;</span><br><span class="line">                    System.out.println(oldData);</span><br><span class="line">                    System.out.println(<span class="string">&quot;节点发生了修改&quot;</span>);</span><br><span class="line">                    System.out.println(data);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;NODE_DELETED&quot;</span>.equals(type.name())) &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;节点被删除了&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        curatorCache.start();</span><br><span class="line">		<span class="comment">//让测试模块可以长时间运行</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="分布式锁（重点）"><a href="#分布式锁（重点）" class="headerlink" title="分布式锁（重点）"></a>分布式锁（重点）</h4><h5 id="分布式锁和普通锁"><a href="#分布式锁和普通锁" class="headerlink" title="分布式锁和普通锁"></a>分布式锁和普通锁</h5><p><strong>为什么分布式系统中不能用普通锁呢?普通锁和分布式锁有什么区别吗?</strong></p>
+<p>普通锁</p>
+<ol>
+<li>单一系统找那个, 同一个应用程序是有同一个进程, 然后多个线程并发会造成数据安全问题, 他们是共享同一块内存的, 所以在内存某个地方做标记即可满足需求.</li>
+<li>例如synchronized和volatile+cas一样对具体的代码做标记, 对应的就是在同一个内存区域作了同步的标记.</li>
+</ol>
+<p>分布式锁</p>
+<ol>
+<li><p>分布式系统中, 最大的区别就是不同系统中的应用程序都在各自机器上不同的进程中处理的, 这里的线程不安全可以理解为多进程造成</p>
+<p>的数据安全问题, 他们不会共享同一台机器的同一块内存区域, 因此需要将标记存储在所有进程都能看到的地方.</p>
+</li>
+<li><p>例如zookeeper作分布式锁，就是将锁标记存储在多个进程共同看到的地方，redis作分布式锁，是将其标记公共内存，而不是某个进</p>
+<p>程分配的区域.</p>
+</li>
+</ol>
+<h5 id="目前分布式锁的实现"><a href="#目前分布式锁的实现" class="headerlink" title="目前分布式锁的实现"></a><strong>目前分布式锁的实现</strong></h5><p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115153940936.png" alt="image-20211115153940936"></p>
+<h5 id="Zookeeper实现分布式锁的原理"><a href="#Zookeeper实现分布式锁的原理" class="headerlink" title="Zookeeper实现分布式锁的原理"></a>Zookeeper实现分布式锁的原理</h5><p>核心思想:当客户端要获取锁，则创建节点，使用完锁，则删除该节点。</p>
+<ol>
+<li><p>客户端获取锁时，在lock（随便起的）节点下创建<strong>临时顺序</strong>节点。</p>
+<blockquote>
+<p>Q:为什么创建临时节点</p>
+<p>A:保证锁可以正常释放。当获取锁的client发生宕机，持久化节点所持有的锁就无法释放，而临时节点在链接断开之后就会被删除，同时释放锁资源。</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115155140706.png" alt="image-20211115155140706"></p>
+<ol start="2">
+<li><p>然后获取lock下面的所有子节点，客户端获取到所有的子节点之后，如果发现自己创建的子节点序号最小，那么就认为该客户端获取</p>
+<p>到了锁。使用完锁后，将该节点删除。</p>
+</li>
+<li><p>如果发现自己创建的节点并非lock所有子节点中最小的，说明自己还没有获取到锁，此时客户端需要找到比自己小的那个节点，同时</p>
+<p>对其注册事件监听器，监听删除事件。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115155454060.png" alt="image-20211115155454060"></p>
+</li>
+<li><p>如果发现比自己小的那个节点被删除，则客户端的Watcher会收到相应通知，此时再次判断自己创建的节点是否是lock子节点中序号</p>
+<p>最小的，如果是则获取到了锁,如果不是则重复以上步骤继续获取到比自己小的一个节点并注册监听。</p>
+</li>
+</ol>
+<h3 id="Zookeeper集群"><a href="#Zookeeper集群" class="headerlink" title="Zookeeper集群"></a>Zookeeper集群</h3><h4 id="Zookeeper集群介绍"><a href="#Zookeeper集群介绍" class="headerlink" title="Zookeeper集群介绍"></a>Zookeeper集群介绍</h4><p>Leader选举:</p>
+<ul>
+<li>Serverid:服务器ID<br>比如有三台服务器，编号分别是1,2,3。编号越大在选择算法中的权重越大。.</li>
+<li>Zxid:数据ID<br>服务器中存放的最大数据ID.值越大说明数据越新，在选举算法中数据越新权重越大。<br>在Leader选举的过程中，如果某台ZooKeeper获得了超过半数的选票,则此ZooKeeper就可以成为Leader了.</li>
+</ul>
+<h4 id="Zookeeper伪集群搭建"><a href="#Zookeeper伪集群搭建" class="headerlink" title="Zookeeper伪集群搭建"></a>Zookeeper伪集群搭建</h4><h5 id="zookeeper集群种类"><a href="#zookeeper集群种类" class="headerlink" title="zookeeper集群种类"></a>zookeeper集群种类</h5><p>1、单节点方式：部署在一台机器上</p>
+<p>2、单IP多节点：部署在同一IP，但是有多个节点，各有自己的端口</p>
+<p>3、多IP多节点：部署在不同IP，各有自己的端口</p>
+<h5 id="伪集群的搭建"><a href="#伪集群的搭建" class="headerlink" title="伪集群的搭建"></a>伪集群的搭建</h5><ol>
+<li><p>基本安装</p>
+<p>在usr/local/zookeeper-cluster创建三个zookeeper文件夹</p>
+<p>对应三个zookeeper</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir zookeeper-cluster</span><br><span class="line"></span><br><span class="line">mkdir zookeeper-1</span><br><span class="line">mkdir zookeeper-2</span><br><span class="line">mkdir zookeeper-3</span><br></pre></td></tr></table></figure>
+
+<p>将zookeeper文件复制到三个文件夹下，可以是提前解压好的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp -r apache-zookeeper-3.7.0-bin  /usr/local/zookeeper-cluster/zookeeper-1</span><br><span class="line">cp -r apache-zookeeper-3.7.0-bin  /usr/local/zookeeper-cluster/zookeeper-2</span><br><span class="line">cp -r apache-zookeeper-3.7.0-bin  /usr/local/zookeeper-cluster/zookeeper-3</span><br></pre></td></tr></table></figure>
+
+<p>为每个zookeeper创建对应的data目录，并将conf下的zoo_sample.cfg文件改名为zoo.cfg</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/zookeeper-cluster/zookeeper-1/zkdata</span><br><span class="line">mkdir /usr/local/zookeeper-cluster/zookeeper-2/zkdata</span><br><span class="line">mkdir /usr/local/zookeeper-cluster/zookeeper-3/zkdata</span><br><span class="line"></span><br><span class="line">mv /usr/local/zookeeper-cluster/zookeeper-1/conf/zoo_sample.cfg /usr/local/zookeeper-cluster/zookeeper-1/conf/zoo.cfg</span><br><span class="line">mv /usr/local/zookeeper-cluster/zookeeper-2/conf/zoo_sample.cfg /usr/local/zookeeper-cluster/zookeeper-2/conf/zoo.cfg</span><br><span class="line">mv /usr/local/zookeeper-cluster/zookeeper-3/conf/zoo_sample.cfg /usr/local/zookeeper-cluster/zookeeper-3/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<p>配置zookeeper的dataDir和clientPort</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/zookeeper-cluster/zookeeper-1/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#zoo.cfg</span><br><span class="line">dataDir=/usr/local/zookeeper-cluster/zookeeper-1/apache-zookeeper-3.7.0-bin/zkdata</span><br><span class="line">clientPort=2181/2182/2183</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，三个zookeeper还是属于单机的状态，不知道其他zookeeper的存在</p>
+</li>
+<li><p>集群配置</p>
+<p>在每个zookeeper的data目录下创建一个myid文件，内容分别是1、2、3。这个文件就是记录每个服务器的ID</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt;/usr/local/zookeeper-cluster/zookeeper-1/apache-zookeeper-3.7.0-bin/zkdata/myid</span><br><span class="line">echo 2 &gt;/usr/local/zookeeper-cluster/zookeeper-1/apache-zookeeper-3.7.0-bin/zkdata/myid</span><br><span class="line">echo 3 &gt;/usr/local/zookeeper-cluster/zookeeper-1/apache-zookeeper-3.7.0-bin/zkdata/myid</span><br></pre></td></tr></table></figure>
+
+<p>在每一个zookeeper的zoo.cfg配置客户端访问端口(clientPort）和集群服务器IP列表。集群服务器P列表如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/zookeeper-cluster/zookeeper-1/apache-zookeeper-3.7.0-bin/conf/zoo.cfg</span><br><span class="line">vi /usr/local/zookeeper-cluster/zookeeper-2/apache-zookeeper-3.7.0-bin/conf/zoo.cfg</span><br><span class="line">vi /usr/local/zookeeper-cluster/zookeeper-3/apache-zookeeper-3.7.0-bin/conf/zoo.cfg</span><br><span class="line"></span><br><span class="line">server.1=(服务器ip)124.70.145.43:2881:（）3881</span><br></pre></td></tr></table></figure>
+
+<p>解释: server.服务器ID=服务器IP地址:服务器之间通信端口:服务器之间投票选举端口</p>
+</li>
+<li><p>启动集群</p>
+<p>启动server1</p>
+<p>使用bin/zkServer.sh status查看server1的启动结果：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115215138963.png" alt="image-20211115215138963"></p>
+<p>此时server2和server3都没有正常启动，因此此时出现失败是正常的，等到2和3启动后就会消失。</p>
+</li>
+</ol>
+<blockquote>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>同一IP上搭建多个节点的集群时，必须要注意端口问题，端口必须不一致才行；</p>
+<p>创建多个节点集群时，在dataDir目录下必须创建myid文件，myid文件用于zookeeper验证server序号等，myid文件只有一行，并且为当前server的序号，例如server.1的myid就是1，server2的myid就是2等。</p>
+</blockquote>
+<h4 id="Zookeeper集群搭建"><a href="#Zookeeper集群搭建" class="headerlink" title="Zookeeper集群搭建"></a>Zookeeper集群搭建</h4><p>和伪集群配置差不多，只不过需要注意一些点</p>
+<p>注意点参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/beitiandijun/article/details/41802835">https://blog.csdn.net/beitiandijun/article/details/41802835</a></p>
+<h4 id="Zookeeper集群角色"><a href="#Zookeeper集群角色" class="headerlink" title="Zookeeper集群角色"></a>Zookeeper集群角色</h4><p>在ZooKeeper集群服中务中有三个角色:</p>
+<ul>
+<li><code>leader</code> 是集群中最重要的角色。负责响应集群的所有对Zookeeper数据状态变更的请求（可以理解为事务请求）。它会将每个状态更新请求进行顺序管理，以便保证整个集群内部消息处理的 FIFO，遵循了顺序一致性（Sequential Consistency）。<ul>
+<li><code>leader</code> 内部维护 session ，来自客户端的连接和断开连接，都会被统一<code>follower</code> 或 <code>observer</code> 转发给<code>leader</code>处理。</li>
+<li><code>leader</code> 内部维护单调递增的 Zxid（<code>ZooKeeper Transaction Id</code>），针对客户端连接，断开连接，节点的写操作都会分配一个全局唯一的Zxid，同时这些操作是原子性的，并且是严格顺序性的，遵循<code>ZAB</code>原子广播一致性协议完成事务（transaction）操作。如果客户端的所有写操作，都会被 <code>follower</code> 统一转发给<code>leader</code>处理。</li>
+</ul>
+</li>
+<li><code>follower</code> <ul>
+<li>具有选举权，参与<code>Leader</code>选举投票。</li>
+<li>负责给<code>leader</code>转发客户端的写服务（事务请求），需要响应<code>leader</code>的提议</li>
+<li>处理客户端非事务请求（读）</li>
+</ul>
+</li>
+<li><code>observer </code><ul>
+<li>没有选举权。</li>
+<li>主要提供给客户端读服务，不提供写服务，也不需要响应<code>leader</code>的提议。</li>
+<li>不需要日志文件，因为没有写服务，没有持久化的需要。</li>
+</ul>
+</li>
+</ul>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="一、分布式锁"><a href="#一、分布式锁" class="headerlink" title="一、分布式锁"></a>一、分布式锁</h2><h4 id="为什么分布式系统中不能用普通锁呢-普通锁和分布式锁有什么区别吗"><a href="#为什么分布式系统中不能用普通锁呢-普通锁和分布式锁有什么区别吗" class="headerlink" title="为什么分布式系统中不能用普通锁呢?普通锁和分布式锁有什么区别吗?"></a>为什么分布式系统中不能用普通锁呢?普通锁和分布式锁有什么区别吗?</h4><p><strong>普通锁</strong></p>
+<ol>
+<li><p>单一系统找那个, 同一个应用程序是有同一个进程, 然后多个线程并发会造成数据安全问题, 他们是共享同一块内存的, 所以在内存某个地方</p>
+</li>
+<li><p>做标记即可满足需求.例如synchronized和volatile+cas一样对具体的代码做标记, 对应的就是在同一个内存区域作了同步的标记.</p>
+</li>
+</ol>
+<p><strong>分布式锁</strong></p>
+<ol>
+<li>分布式系统中, 最大的区别就是不同系统中的应用程序都在各自机器上不同的进程中处理的, 这里的线程不安全可以理解为多进程造成的数据安全问题, 他们不会共享同一台机器的同一块内存区域, 因此需要将标记存储在所有进程都能看到的地方.</li>
+<li>例如zookeeper作分布式锁，就是将锁标记存储在多个进程共同看到的地方，redis作分布式锁，是将其标记公共内存，而不是某个进程分配的区域.</li>
+</ol>
+<h4 id="分布式锁应该具备哪些条件"><a href="#分布式锁应该具备哪些条件" class="headerlink" title="分布式锁应该具备哪些条件"></a>分布式锁应该具备哪些条件</h4><p>在分析分布式锁的三种实现方式之前，先了解一下分布式锁应该具备哪些条件：</p>
+<ul>
+<li>在分布式系统环境下，一个方法在同一时间只能被一个机器的一个线程执行；</li>
+<li>高可用的获取锁与释放锁；</li>
+<li>高性能的获取锁与释放锁；</li>
+<li>具备可重入特性；</li>
+<li>具备锁失效机制，防止死锁；</li>
+<li>具备非阻塞锁特性，即没有获取到锁将直接返回获取锁失败。</li>
+</ul>
+<h4 id="分布式锁的三种实现方式"><a href="#分布式锁的三种实现方式" class="headerlink" title="分布式锁的三种实现方式"></a>分布式锁的三种实现方式</h4><ol>
+<li><p>基于数据库实现分布式锁；</p>
+</li>
+<li><p>基于缓存（Redis等）实现分布式锁；</p>
+</li>
+<li><p>基于Zookeeper实现分布式锁；</p>
+<p>尽管有这三种方案，但是不同的业务也要根据自己的情况进行选型，他们之间没有最好只有更适合！</p>
+</li>
+</ol>
+<h4 id="数据库的分布式锁的实现"><a href="#数据库的分布式锁的实现" class="headerlink" title="数据库的分布式锁的实现"></a>数据库的分布式锁的实现</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42641909/article/details/106721358">https://blog.csdn.net/weixin_42641909/article/details/106721358</a></p>
+<h5 id="基于表记录实现分布式锁"><a href="#基于表记录实现分布式锁" class="headerlink" title="基于表记录实现分布式锁"></a>基于表记录实现分布式锁</h5><p>基于数据库的实现方式的核心思想是:</p>
+<p>在数据库中创建一个表, 表中包含<strong>方法名</strong>等字段, 并在<strong>方法名字段上创建唯一索引</strong>.</p>
+<p>想要执行某个方法, 就使用这个方法名向表中插入数据, 成功插入则获取锁, 执行完成后删除对应的行数据释放锁.</p>
+<ol>
+<li><p>创建一个表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> `method_lock`;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `method_lock` (</span><br><span class="line">  `id` <span class="type">int</span>(<span class="number">11</span>) unsigned <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;主键&#x27;</span>,</span><br><span class="line">  `method_name` <span class="type">varchar</span>(<span class="number">64</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;锁定的方法名&#x27;</span>,</span><br><span class="line">  `<span class="keyword">desc</span>` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;备注信息&#x27;</span>,</span><br><span class="line">  `update_time` <span class="type">timestamp</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY (`id`),</span><br><span class="line">  <span class="keyword">UNIQUE</span> KEY `uidx_method_name` (`method_name`) <span class="keyword">USING</span> BTREE</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB AUTO_INCREMENT<span class="operator">=</span><span class="number">3</span> <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8 COMMENT<span class="operator">=</span><span class="string">&#x27;锁定中的方法&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/img/image-20211115190429329.png" alt="image-20211115190429329"></p>
+<ol start="2">
+<li><p>想要执行某个方法, 就使用这个方法名向表中插入数据:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> method_lock (method_name, <span class="keyword">desc</span>) <span class="keyword">VALUES</span> (<span class="string">&#x27;methodName&#x27;</span>, <span class="string">&#x27;测试的methodName&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>因为我们对method_name做了唯一性约束, 这里如果有多个请求同事提交到数据库的话, 数据库会保证只有一个操作可以成功, 那么我们就可以认为操作成功的那个现场恒获得了该方法的锁, 可以执行方法体内容.</p>
+</li>
+<li><p>成功插入则获取锁, 执行完成后删除对应的行数据释放锁</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> method_lock <span class="keyword">where</span> method_name <span class="operator">=</span><span class="string">&#x27;methodName&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>基于表记录实现分布式锁的特点</strong></p>
+<ul>
+<li><p>这种锁没有失效时间, 一旦释放锁的操作失败就会导致锁记录一直在数据库中, 其他线程无法获得锁. 这个缺陷也很好解决, 比如可以做</p>
+<p>一个定时任务去定时清理.</p>
+</li>
+<li><p>这种锁的可靠性依赖于数据库, 建议设置备库, 避免单点, 进一步提高可靠性.</p>
+</li>
+<li><p>这种锁是非阻塞的, 因为插入数据失败之后会直接报错, 想要获得锁就需要再次操作. 如果需要阻塞式的, 可以来个for循环或while循环, </p>
+<p>直至INSERT成功再返回.</p>
+</li>
+<li><p>这种锁也是非可重入的, 因为同一个线程在没有释放锁之前无法再次获得锁, 因为数据库中已经存在同一份记录了. 想要实现可重入锁, </p>
+<p>可以在数据库中添加一些字段, 比如获得锁的主机信息、线程信息等, 那么在再次获得锁的时候可以先查询数据, 如果当前的主机信息</p>
+<p>和线程信息等能被查到的话, 可以直接把锁分配给它.</p>
+</li>
+</ul>
+<h5 id="基于乐观锁实现分布式锁"><a href="#基于乐观锁实现分布式锁" class="headerlink" title="基于乐观锁实现分布式锁"></a>基于乐观锁实现分布式锁</h5><p>​        系统认为数据的更新在大多数情况下是不会产生冲突的，只在数据库更新操作提交的时候才对数据作冲突检测。如果检测的结果出现了与预期数据不一致的情况，则返回失败信息.</p>
+<p>​        乐观锁大多数是基于数据版本(version)的记录机制实现的. 即为数据增加一个版本标识.</p>
+<ol>
+<li>在基于数据库表的版本解决方案中, 一般是通过为数据库表添加一个 “version”字段来实现读取出数据时, 将此版本号一同读出, 之后更新时, 对此版本号加1.</li>
+<li>在更新过程中, 会对版本号进行比较, 如果是一致的, 没有发生改变, 则会成功执行本次操作; 如果版本号不一致, 则会更新失败.</li>
+</ol>
+<ul>
+<li><p>基于乐观锁的优点</p>
+<p>在检测数据冲突时并不依赖数据库本身的锁机制, 不会影响请求的性能, 当产生并发且并发量较小的时候只有少部分请求会失败.</p>
+</li>
+<li><p>基于乐观锁的缺点</p>
+<p>需要对表的设计增加额外的字段, 增加了数据库的冗余, 另外, 当应用并发量高的时候, version值在频繁变化, 则会导致大量请求失败, 影响系统的可用性.</p>
+<p>综合数据库乐观锁的优缺点, 乐观锁比较适合并发量不高, 并且写操作不频繁的场景.</p>
+</li>
+</ul>
+<h5 id="基于悲观锁实现分布式锁"><a href="#基于悲观锁实现分布式锁" class="headerlink" title="基于悲观锁实现分布式锁"></a>基于悲观锁实现分布式锁</h5><p>​        除了通过增删操作数据库表中的记录来实现分布式锁, 我们还可以借助数据库中再带的锁来实现分布式锁.</p>
+<p>​        <strong>在查询语句后面增加For Update, 数据库会在查询过程中给数据库表增加悲观锁(也成排他锁), 当某条记录被加上悲观锁后, 其他线程</strong></p>
+<p><strong>也就无法再该行上增加悲观锁了</strong>.</p>
+<ol>
+<li><p>悲观锁与乐观锁相反, 总是假设最坏的情况, 它认为数据的更新在大多数情况下是会产生冲突的.</p>
+</li>
+<li><p>在使用悲观锁的同时, 我们需要注意一下锁的级别. 搜索引擎的不同也会带了锁级别的不同.</p>
+<p>如果存储引擎是InnoDB, 在加锁的时候只有明确地指定主键(或索引)的才会执行行锁(只锁住被选取的数据), 否则Mysql将会执行表锁(将整个数据表单给锁住).</p>
+</li>
+</ol>
+<p><strong>使用悲观锁实现分布式锁特点</strong></p>
+<ol>
+<li>在悲观锁中, 每一次行数据的访问都是独占的, 只有当正在访问该行数据的请求事务提交以后, 其他请求才能依次访问该数据, 否则将阻塞等待锁的释放.</li>
+<li>悲观锁可以严格保证数据访问的安全.</li>
+<li>但是缺点也明显, 即每次请求都会额产生加锁的开销, 且未获取到锁的请求将会阻塞等待锁的释放, 在高并发环境下, 容易造成大量请求阻塞, 影响系统可用性,</li>
+<li>悲观锁使用不当还可能产生死锁的情况</li>
+</ol>
+<h4 id="Redis的分布式锁"><a href="#Redis的分布式锁" class="headerlink" title="Redis的分布式锁"></a>Redis的分布式锁</h4><p>待补充！！！！！！！！！！！</p>
+<h2 id="二、关于设置图床"><a href="#二、关于设置图床" class="headerlink" title="二、关于设置图床"></a>二、关于设置图床</h2><p><a target="_blank" rel="noopener" href="https://www.codenong.com/cs106528795/">https://www.codenong.com/cs106528795/</a></p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+
+<script src="/js/jquery.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
