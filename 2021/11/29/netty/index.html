@@ -311,7 +311,7 @@ for rapid development">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -463,6 +463,11 @@ for rapid development">
 
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    33.2k
+                </div>
                 
 
                 
@@ -5363,7 +5368,7 @@ public boolean continueReading(UncheckedBooleanSupplier maybeMoreDataSupplier) &
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -5376,6 +5381,33 @@ public boolean continueReading(UncheckedBooleanSupplier maybeMoreDataSupplier) &
             
         </div>
     </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2021-11-29T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
@@ -5406,7 +5438,7 @@ public boolean continueReading(UncheckedBooleanSupplier maybeMoreDataSupplier) &
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Netty学习之NIO基础">
+                        <img src="/medias/images/9.jpg" class="responsive-img" alt="Netty学习之NIO基础">
                         
                         <span class="card-title">Netty学习之NIO基础</span>
                     </div>
@@ -5455,7 +5487,7 @@ public boolean continueReading(UncheckedBooleanSupplier maybeMoreDataSupplier) &
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="SpringCloud学习笔记">
+                        <img src="/medias/images/2.jpg" class="responsive-img" alt="SpringCloud学习笔记">
                         
                         <span class="card-title">SpringCloud学习笔记</span>
                     </div>
@@ -5708,11 +5740,6 @@ public boolean continueReading(UncheckedBooleanSupplier maybeMoreDataSupplier) &
             </span>
             
             
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
-            
             <br>
 
             <!-- 运行天数提醒. -->
@@ -5951,6 +5978,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
