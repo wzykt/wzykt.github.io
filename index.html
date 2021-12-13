@@ -416,6 +416,33 @@
                 </div>
             </div>
         
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/images/10.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">抢红包实战案例</div>
+                            <div class="description center-align">
+                                
+                                    微信抢红包实战案例架构设计
+业务流程
+老板发红包，此时缓存初始化红包个数，红包金额(单位分)，并异步入库。
+抢红包，判断缓存剩余红包金额，剩余金额大于零则抢到红包，否则手慢了，红包派完了
+拆红包，根据 redPacketId 获取分布式锁，
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/12/13/hong-bao/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
     
 </div>
 
@@ -529,6 +556,59 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/12/13/hong-bao/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/images/10.jpg" class="responsive-img" alt="抢红包实战案例">
+                            
+                            <span class="card-title">抢红包实战案例</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                微信抢红包实战案例架构设计
+业务流程
+老板发红包，此时缓存初始化红包个数，红包金额(单位分)，并异步入库。
+抢红包，判断缓存剩余红包金额，剩余金额大于零则抢到红包，否则手慢了，红包派完了
+拆红包，根据 redPacketId 获取分布式锁，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Redis/" class="post-category">
+                                    Redis
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+                            <span class="chip bg-color">分布式锁</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -782,67 +862,6 @@ for rapid development
                         
                         <a href="/tags/Netty/">
                             <span class="chip bg-color">Netty</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/11/29/springcloud/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/images/2.jpg" class="responsive-img" alt="SpringCloud学习笔记">
-                            
-                            <span class="card-title">SpringCloud学习笔记</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                认识微服务随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？
-单体架构单体架构：将业务的所有功能集中在一个项目中开发，打成一个包部署。
-
-单体架构的优缺点如下：
-优
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
-                            <span class="chip bg-color">微服务</span>
-                        </a>
-                        
-                        <a href="/tags/Nacos/">
-                            <span class="chip bg-color">Nacos</span>
-                        </a>
-                        
-                        <a href="/tags/Eureka/">
-                            <span class="chip bg-color">Eureka</span>
                         </a>
                         
                     </div>
