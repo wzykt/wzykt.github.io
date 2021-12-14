@@ -491,18 +491,14 @@ NoSQL是一个通用术语，用于指不遵循传统RDBMS模型的任何数据�
 </tr>
 </tbody></table>
 <p><strong>键值( Key-Value )存储数据库</strong></p>
-<p>这一类数据库主要会使用到一个 哈希表，这个表中有一个特定的键和一个指针指向特定的数据。Key/value模型对于IT系统来说的优势在于简单、易部署。但是如</p>
-<p>果 DBA只对部分值进行查询或更新的时候，Key/value就显得效率低下了。 [3]  举例如：Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB.</p>
+<p>这一类数据库主要会使用到一个 哈希表，这个表中有一个特定的键和一个指针指向特定的数据。Key/value模型对于IT系统来说的优势在于简单、易部署。但是如果 DBA只对部分值进行查询或更新的时候，Key/value就显得效率低下了。 [3]  举例如：Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB.</p>
 <p><strong>列存储数据库。</strong></p>
 <p>这部分数据库通常是用来应对分布式存储的海量数据。键仍然存在，但是它们的特点是指向了多个列。这些列是由列家族来安排的。如：Cassandra, HBase, Riak.</p>
 <p><strong>文档型数据库</strong></p>
-<p>文档型数据库的灵感是来自于Lotus Notes办公软件的，而且它同第一种键值存储相类似。该类型的数据模型是版本化的文档，半结构化的文档以特定的格式存</p>
-<p>储，比如JSON。文档型数据库可 以看作是键值数据库的升级版，允许之间嵌套键值。而且文档型数据库比键值数据库的查询效率更高。如：CouchDB, </p>
+<p>文档型数据库的灵感是来自于Lotus Notes办公软件的，而且它同第一种键值存储相类似。该类型的数据模型是版本化的文档，半结构化的文档以特定的格式存储，比如JSON。文档型数据库可 以看作是键值数据库的升级版，允许之间嵌套键值。而且文档型数据库比键值数据库的查询效率更高。如：CouchDB, </p>
 <p>MongoDB. 国内也有文档型数据库SequoiaDB，目前已经开源。</p>
-<p><strong>图形(Graph)数据库</strong><br>图形结构的数据库同其他行列以及刚性结构的SQL数据库不同，它是使用灵活的图形模型，并且能够扩展到多个服务器上。NoSQL数据库没有标准的查询语言</p>
-<p>(SQL)，因此进行数据库查询需要制定数据模型。许多NoSQL数据库都有REST式的数据接口或者查询API。 [2]  如：Neo4J, InfoGrid, Infinite Graph.</p>
-<p>因此，我们总结NoSQL数据库在以下的这几种情况下比较适用：1、数据模型比较简单；2、需要灵活性更强的IT系统；3、对数据库性能要求较高；4、不需要高</p>
-<p>度的数据一致性；5、对于给定key，比较容易映射复杂值的环境。</p>
+<p><strong>图形(Graph)数据库</strong><br>图形结构的数据库同其他行列以及刚性结构的SQL数据库不同，它是使用灵活的图形模型，并且能够扩展到多个服务器上。NoSQL数据库没有标准的查询语言(SQL)，因此进行数据库查询需要制定数据模型。许多NoSQL数据库都有REST式的数据接口或者查询API。 [2]  如：Neo4J, InfoGrid, Infinite Graph.</p>
+<p>因此，我们总结NoSQL数据库在以下的这几种情况下比较适用：1、数据模型比较简单；2、需要灵活性更强的IT系统；3、对数据库性能要求较高；4、不需要高度的数据一致性；5、对于给定key，比较容易映射复杂值的环境。</p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yejg1212/p/3584094.html">常见的NoSQL数据库</a></p>
 <h1 id="Redis介绍"><a href="#Redis介绍" class="headerlink" title="Redis介绍"></a>Redis介绍</h1><h2 id="Redis中文文档"><a href="#Redis中文文档" class="headerlink" title="Redis中文文档"></a>Redis中文文档</h2><p><a target="_blank" rel="noopener" href="http://www.redis.cn/">http://www.redis.cn/</a></p>
 <h2 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h2><p>Redis（Remote Dictionary Server )，即远程字典服务，是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。从2010年3月15日起，Redis的开发工作由VMware主持。从2013年5月开始，Redis的开发由Pivotal赞助。</p>
@@ -1169,7 +1165,7 @@ NoSQL是一个通用术语，用于指不遵循传统RDBMS模型的任何数据�
 <li>有两种类型的位操作：一类是对特定bit位的操作，比如设置/获取某个特定比特位的值。另一类是批量bit位操作，例如在给定范围内统计为1的比特位个数。</li>
 <li>Bitmap是一串连续的2进制数字（0或1），每一位所在的位置为偏移(offset)，在bitmap上可执行AND,OR,XOR以及其它位操作。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://easyreadfs.nosdn.127.net/bFxn73tfrlnNzJDOe-0WzA==/8796093023252283210"><img src="https://easyreadfs.nosdn.127.net/bFxn73tfrlnNzJDOe-0WzA==/8796093023252283210" alt="img"></a></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20211214152926376.png" alt="image-20211214152926376"></p>
 <p>需要注意的是：BitMap 在 Redis 中并不是一个新的数据类型，其底层是 Redis 实现。</p>
 <p><strong>Bitmaps使用场景</strong></p>
 <blockquote>
@@ -1244,19 +1240,19 @@ NoSQL是一个通用术语，用于指不遵循传统RDBMS模型的任何数据�
 </tr>
 </tbody></table>
 <h3 id="Redis事务实操"><a href="#Redis事务实操" class="headerlink" title="Redis事务实操"></a>Redis事务实操</h3><p><strong>正常执行</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416204151947-1999193750.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416204151947-1999193750.png" alt="img"></p>
 <p><strong>放弃事务</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416204558119-2028373874.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416204558119-2028373874.png" alt="img"></p>
 <p><strong>若在事务队列中存在命令性错误（类似于java编译性错误），则执行EXEC命令时，所有命令都不会执行</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416205137740-1887538258.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416205137740-1887538258.png" alt="img"></p>
 <p><strong>若在事务队列中存在语法性错误（类似于java的1/0的运行时异常），则执行EXEC命令时，其他正确命令会被执行，错误命令抛出异常。</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416205714294-77806844.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416205714294-77806844.png" alt="img"></p>
 <h3 id="Redis-锁"><a href="#Redis-锁" class="headerlink" title="Redis-锁"></a>Redis-锁</h3><h4 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h4><p>watch指令类似于乐观锁，在事务提交时，如果watch监控的多个KEY中任何KEY的值已经被其他客户端更改，则使用EXEC执行事务时，事务队列将不会被执行，同时返回Nullmulti-bulk应答以通知调用者事务执行失败。</p>
 <p><strong>使用watch</strong></p>
 <p>案例一：使用watch检测balance，事务期间balance数据未变动，事务执行成功</p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416210530600-1167641209.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416210530600-1167641209.png" alt="img"></p>
 <p>案例二：使用watch检测balance，在开启事务后（标注1处），在新窗口执行标注2中的操作，更改balance的值，模拟其他客户端在事务执行期间更改watch监控的数据，然后再执行标注1后命令，执行EXEC后，事务未成功执行。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416211144923-1469436233.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/1659331-20190416211144923-1469436233.png" alt="img"></p>
 <p><img src="https://img2018.cnblogs.com/blog/1659331/201904/1659331-20190416211149567-1618751187.png" alt="img"></p>
 <p>一但执行 EXEC 开启事务的执行后，无论事务使用执行成功， WARCH 对变量的监控都将被取消。</p>
 <p>故当事务执行失败后，需重新执行WATCH命令对变量进行监控，并开启新的事务进行操作。</p>
@@ -1685,13 +1681,13 @@ public class RedisUtil &#123;
 </tbody></table>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/WYA1993/article/details/83096088">redis.conf</a></p>
 <h1 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h1><h2 id="什么是Redis持久化"><a href="#什么是Redis持久化" class="headerlink" title="什么是Redis持久化?"></a>什么是Redis持久化?</h2><p>Redis作为一个键值对内存数据库(NoSQL)，数据都存储在内存当中，在处理客户端请求时，所有操作都在内存当中进行，如下所示：</p>
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java5-1566526018.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java5-1566526018.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p><strong>这样做有什么问题呢？</strong></p>
 <p>其实，只要稍微有点计算机基础知识的人都知道，存储在内存当中的数据，只要服务器关机(各种原因引起的)，内存中的数据就会消失了，不仅服务器关机会造成数据消失，Redis服务器守护进程退出，内存中的数据也一样会消失。</p>
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java1-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java1-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p>对于只把Redis当缓存来用的项目来说，数据消失或许问题不大，重新从数据源把数据加载进来就可以了，但如果直接把用户提交的业务数据存储在Redis当中，把Redis作为数据库来使用，在其放存储重要业务数据，那么Redis的内存数据丢失所造成的影响也许是毁灭性。</p>
 <p>为了避免内存中数据丢失，Redis提供了对持久化的支持，我们可以选择不同的方式将数据从内存中保存到硬盘当中，使数据可以持久化保存。</p>
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java3-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java3-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p>Redis提供了RDB和AOF两种不同的数据持久化方式，下面我们就来详细介绍一下这种不同的持久化方式吧。</p>
 <h3 id="快照"><a href="#快照" class="headerlink" title="快照"></a>快照</h3><p>了解RDB，先了解什么是快照。</p>
 <p>快照技术主要是在操作系统以及存储技术上实现的一种记录某一时间系统状态的技术。近来，Oracle等数据库厂家以及Vmware等虚拟化产品也把这种技术引入各自的数据保护当中。</p>
@@ -1702,14 +1698,14 @@ public class RedisUtil &#123;
 <pre class="line-numbers language-none"><code class="language-none"># 同步数据到磁盘上
 &gt; save <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java4-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java4-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p>当客户端向服务器发送save命令请求进行持久化时，服务器会阻塞save命令之后的其他客户端的请求，直到数据同步完成。</p>
 <p>如果数据量太大，同步数据会执行很久，而这期间Redis服务器也无法接收其他请求，所以，最好不要在生产环境使用save命令。</p>
 <h4 id="2-bgsave"><a href="#2-bgsave" class="headerlink" title="2. bgsave"></a>2. bgsave</h4><p>与save命令不同，bgsave命令是一个异步操作。</p>
 <pre class="line-numbers language-none"><code class="language-none"># 异步保存数据集到磁盘上
 &gt; bgsave<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java5-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java5-1566526019.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p>当客户端发服务发出bgsave命令时，Redis服务器主进程会forks一个子进程来数据同步问题，在将数据保存到rdb文件之后，子进程会退出。</p>
 <p>所以，与save命令相比，Redis服务器在处理bgsave采用子线程进行IO写入，而主进程仍然可以接收其他请求，但forks子进程是同步的，所以forks子进程时，一样不能接收其他请求，这意味着，如果forks一个子进程花费的时间太久(一般是很快的)，bgsave命令仍然有阻塞其他客户的请求的情况发生。</p>
 <h4 id="3-服务器配置自动触发"><a href="#3-服务器配置自动触发" class="headerlink" title="3. 服务器配置自动触发"></a>3. 服务器配置自动触发</h4><p>除了通过客户端发送命令外，还有一种方式，就是在Redis配置文件中的save指定到达触发RDB持久化的条件，比如【多少秒内至少达到多少写操作】就开启RDB数据同步。</p>
@@ -1756,7 +1752,7 @@ dir ~&#x2F;redis&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span><
 </ul>
 <h2 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h2><p>Redis的另外一个持久化方式：AOF(Append-only file)。</p>
 <p>与RDB存储某个时刻的快照不同，AOF持久化方式会记录客户端对服务器的每一次写操作命令，并将这些写操作以Redis协议追加保存到以后缀为aof文件末尾，在Redis服务器重启时，会加载并运行aof文件的命令，以达到恢复数据的目的。</p>
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java9-1566526020.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java9-1566526020.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p><strong>开启AOF持久化方式</strong></p>
 <p>Redis默认不开启AOF持久化方式，我们可以在配置文件中开启并进行更加详细的配置，如下面的redis.conf文件：</p>
 <pre class="line-numbers language-none"><code class="language-none"># 开启aof机制
@@ -1806,7 +1802,7 @@ no-appendfsync-on-rewrite no<span aria-hidden="true" class="line-numbers-rows"><
 <span class="token operator">></span> bgrewriteaof<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>AOF重写方式也是异步操作，即如果要写入aof文件，则Redis主进程会forks一个子进程来处理，如下所示：</p>
-<p><img src="https://www.javazhiyin.com/wp-content/uploads/2019/08/java10-1566526020.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/java10-1566526020.jpeg" alt="10分钟彻底理解Redis的持久化机制：RDB和AOF"></p>
 <p>重写aof文件的好处</p>
 <ul>
 <li>压缩aof文件，减少磁盘占用量。</li>
@@ -1842,7 +1838,7 @@ $ redis-check-aof -fix file.aof<span aria-hidden="true" class="line-numbers-rows
 <h2 id="什么是主从复制"><a href="#什么是主从复制" class="headerlink" title="什么是主从复制"></a>什么是主从复制</h2><p>主从复制，是指将一台Redis服务器的数据，复制到其他的Redis服务器。前者称为主节点(master)，后者称为从节点(slave),数据的复制是单向的，只能由主节点到从节点。</p>
 <p>默认情况下，每台Redis服务器都是主节点；且一个主节点可以有多个从节点(或没有从节点)，但一个从节点只能有一个主节点。</p>
 <p>Redis的Master和Slave并没有特别不同的地方，Slave也可以拥有自己的Slave，并由此形成主从链。</p>
-<p><img src="https://images2018.cnblogs.com/blog/907596/201807/907596-20180710175627988-299575978.png" alt="img"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/907596-20180710175627988-299575978.png" alt="img"></p>
 <p><img src="https://img-blog.csdnimg.cn/20210411160437949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2MjY0MDA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="主从复制的作用"><a href="#主从复制的作用" class="headerlink" title="主从复制的作用"></a>主从复制的作用</h2><ol>
 <li><p>数据冗余：主从复制实现了数据的热备份，是持久化之外的一种数据冗余方式。</p>
