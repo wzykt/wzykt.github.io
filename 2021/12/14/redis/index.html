@@ -407,7 +407,7 @@ NoSQL是一个通用术语，用于指不遵循传统RDBMS模型的任何数据�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    19k
+                    19.1k
                 </div>
                 
 
@@ -1267,6 +1267,7 @@ NoSQL是一个通用术语，用于指不遵循传统RDBMS模型的任何数据�
 <p>操作完毕通过del操作释放锁</p>
 <p><img src="https://s2.loli.net/2021/12/14/UdEKTcNo7QaVlAn.png" alt="image-20211214150404019"></p>
 <p>注意：使用分布式锁时，要保证锁住的是同一个key。</p>
+<p>假设已经进行了加锁，但是因为宕机或者出现异常未释放锁，就造成了所谓的“死锁”。在 Redis 2.8 的版本后，Redis 就为我们提供了一条组合命令 <code>SET key value ex seconds nx</code>，加锁的同时设置过期时间，避免了死锁。</p>
 <h1 id="SpringBoot整合Redis"><a href="#SpringBoot整合Redis" class="headerlink" title="SpringBoot整合Redis"></a>SpringBoot整合Redis</h1><h3 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis"></a>Jedis</h3><p>Jedis是Redis官方推荐的Java连接开发工具。</p>
 <p>Jedis是Redis官方推荐的面向Java的操作Redis的客户端，而RedisTemplate是SpringDataRedis中对JedisApi的高度封装。</p>
 <p>SpringDataRedis相对于Jedis来说可以方便地更换Redis的Java客户端，比Jedis多了自动管理连接池的特性，方便与其他Spring框架进行搭配使用如：SpringCache</p>
@@ -2061,18 +2062,17 @@ $ redis-check-aof -fix file.aof<span aria-hidden="true" class="line-numbers-rows
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/14/redis/">
+                <a href="/2022/01/18/zai-liu-lan-qi-shu-ru-url-hui-che-zhi-hou-fa-sheng-liao-shi-me/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/images/22.jpg" class="responsive-img" alt="Redis">
+                        <img src="/medias/images/14.jpg" class="responsive-img" alt="在浏览器输入 URL 回车之后发生了什么">
                         
-                        <span class="card-title">Redis</span>
+                        <span class="card-title">在浏览器输入 URL 回车之后发生了什么</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2082,9 +2082,9 @@ $ redis-check-aof -fix file.aof<span aria-hidden="true" class="line-numbers-rows
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2093,20 +2093,19 @@ $ redis-check-aof -fix file.aof<span aria-hidden="true" class="line-numbers-rows
                                     学习笔记
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/TCP-IP/">
+                        <span class="chip bg-color">TCP/IP</span>
+                    </a>
+                    
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>
@@ -2355,7 +2354,7 @@ $ redis-check-aof -fix file.aof<span aria-hidden="true" class="line-numbers-rows
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">KTS</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
