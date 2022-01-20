@@ -4,15 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="在浏览器输入 URL 回车之后发生了什么, KTS Blog">
-    <meta name="description" content="这篇笔记是为了详细了解在浏览器输入 URL 回车之后发生了什么，总结了一些文章的内容，帮助自己去理解。这里了解的是HTTP的请求，而非HTTPS等请求。
-大致流程
-URL解析
+    <meta name="keywords" content="HTTPS为什么安全, KTS Blog">
+    <meta name="description" content="HTTPS简介HTTPS 不是一个新鲜的协议，它仍然是基于 HTTP 协议，可以把 HTTPS 协议看成是穿着防弹衣的 HTTP 协议，协议层对比如下图：
 
-DNS域名解析
-
-建立TCP连接(其中包括发送HTTP请求)
-">
+HTTP 和 HTTPS 协议层对比
+基于 HTTP 协议的网络传输是明文的，对响">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +20,7 @@ DNS域名解析
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>在浏览器输入 URL 回车之后发生了什么 | KTS Blog</title>
+    <title>HTTPS为什么安全 | KTS Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -253,12 +249,12 @@ DNS域名解析
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/24.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">在浏览器输入 URL 回车之后发生了什么</h1>
+                    <h1 class="description center-align post-title">HTTPS为什么安全</h1>
                 </div>
             </div>
         </div>
@@ -374,12 +370,8 @@ DNS域名解析
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/TCP-IP/">
-                                <span class="chip bg-color">TCP/IP</span>
-                            </a>
-                        
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
+                            <a href="/tags/HTTPS/">
+                                <span class="chip bg-color">HTTPS</span>
                             </a>
                         
                     </div>
@@ -403,7 +395,7 @@ DNS域名解析
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-18
+                    2022-01-20
                 </div>
                 
 
@@ -412,7 +404,7 @@ DNS域名解析
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2k
                 </div>
                 
 
@@ -432,132 +424,71 @@ DNS域名解析
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这篇笔记是为了详细了解在浏览器输入 URL 回车之后发生了什么，总结了一些文章的内容，帮助自己去理解。这里了解的是HTTP的请求，而非HTTPS等请求。</p>
-<h3 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h3><ul>
-<li><p>URL解析</p>
-</li>
-<li><p>DNS域名解析</p>
-</li>
-<li><p>建立TCP连接(其中包括发送HTTP请求)</p>
-</li>
-</ul>
+                <h2 id="HTTPS简介"><a href="#HTTPS简介" class="headerlink" title="HTTPS简介"></a>HTTPS简介</h2><p>HTTPS 不是一个新鲜的协议，它仍然是基于 HTTP 协议，可以把 HTTPS 协议看成是穿着防弹衣的 HTTP 协议，协议层对比如下图：</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120162046706.png" alt="image-20220120162046706"></p>
+<p>HTTP 和 HTTPS 协议层对比</p>
+<p>基于 HTTP 协议的网络传输是明文的，对响应的内容也不加验证，这意味着只要传输内容被黑客截获，黑客就能知道传输内容，甚至能够返回一段修改后的内容给用户。这就是常说的 HTTP 劫持，一些运营商会使用这种手段往用户的网页里注入广告。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/11909910-936bcf3cc4732aa8.png" alt="img"></p>
+<h2 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h2><h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p>对称加密，顾名思义，加密方与解密方使用同一钥匙(秘钥)。具体一些就是，发送方通过使用相应的加密算法和秘钥，对将要发送的信息进行加密；对于接收方而言，使用解密算法和相同的秘钥解锁信息，从而有能力阅读信息。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120152155541.png" alt="image-20220120152155541"></p>
 <ul>
-<li>服务器响应请求</li>
-<li>浏览器接受请求</li>
-<li>渲染界面</li>
+<li>优点：很快，方便</li>
+<li>缺点： A给B发送密钥时容易被截取</li>
 </ul>
-<h3 id="URL解析"><a href="#URL解析" class="headerlink" title="URL解析"></a>URL解析</h3><p><strong>地址解析：</strong></p>
-<p>首先判断你输入的是一个合法的 URL 还是一个待搜索的关键词，并且根据你输入的内容进行自动完成、字符编码等操作。</p>
-<p><strong>url长这个样子</strong></p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191900940.png" alt="image-20220118191900940"></p>
-<p>图中的长长的 URL 实际上是请求服务器里的文件资源。</p>
-<pre class="line-numbers language-none"><code class="language-none">scheme:&#x2F;&#x2F;host.domain:port&#x2F;path&#x2F;filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>每个名词的含义如下解释：</p>
-<ul>
-<li>scheme 定义应用层协议类型，比如 http、https、 ftp 等；</li>
-<li>host 定义域主机（http 的默认主机是 www）；</li>
-<li>domain  定义因特网<strong>域名</strong>，比如 segmentfault.com；</li>
-<li>port 主机的端口，http 默认是 80, https 默认是 443；</li>
-<li>path 服务器上的资源路径；</li>
-<li>filename - 定义文档/资源的名称；</li>
-</ul>
-<p><strong>HSTS</strong></p>
-<p>由于安全隐患，会使用 HSTS 强制客户端使用 HTTPS 访问页面。详见：<a href="https://link.zhihu.com/?target=https://www.barretlee.com/blog/2015/10/22/hsts-intro/">你所不知道的 HSTS</a>。</p>
-<p><strong>其他操作</strong></p>
-<p>浏览器还会进行一些额外的操作，比如安全检查、访问限制</p>
-<p><strong>检查缓存</strong></p>
-<p><img src="https://pic1.zhimg.com/v2-0489444034d569b37867e2e527a7d5d4_r.jpg" alt="preview"></p>
-<h3 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h3><p>浏览器不能直接通过域名找到服务器，只能通过 IP 地址。</p>
-<p>那浏览器是如何通过域名查询到我们输入的 url 对应的 IP 呢？</p>
-<p><strong>1. 浏览器缓存</strong></p>
-<p>浏览器会先检查是否在缓存中，没有则调用系统库函数进行查询。</p>
-<p><strong>2. 操作系统缓存</strong></p>
-<p>操作系统也有自己的 DNS缓存，但在这之前，会向检查域名是否存在本地的 Hosts 文件里，没有则向 DNS 服务器发送查询请求。</p>
-<p><strong>3. 路由器缓存</strong></p>
-<p>路由器也有自己的缓存。</p>
-<p><strong>4. ISP DNS 缓存</strong></p>
-<p>ISP DNS 就是在客户端电脑上设置的首选 DNS 服务器，它们在大多数情况下都会有缓存。</p>
+<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p>非对称加密使用两个密钥来进行加密和解密，公开密钥是所有人都知道的密钥，私有密钥是持有方才知道的密钥，一般来说私钥就放在服务器里，数据经过公钥加密就只能被私钥解密，数据经过私钥加密就只能被公钥解密。</p>
+<p>如果应用到客户端和服务端的话，就是服务端自己拥有成对的私钥和公钥，然后公布自己的公钥让客户知道，客户端用公钥把自己的数据进行加密，加密后用公钥反而无法解密这段数据，一定要用服务端的私钥才能解密，这样的非对称加密其实也被叫做公钥加密。因为不同于对称加密中只使用一把私钥进行加密。当然是通过算法来实现的。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120152738500.png" alt="image-20220120152738500"></p>
+<p>那么TLS用那种加密方式呢？</p>
+<p>答案是都用上了</p>
+<h2 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h2><p>这里还有一个问题，虽然我们现在可以对数据进行加密，但是我们还是不知道和我们沟通的是否是自己想要沟通的对象，比如b站的域名</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120153118158.png" alt="image-20220120153118158"></p>
+<p>就会有不法分子伪装b站域名来让你访问，还好ＨＴＴＰＳ解决了这个问题。因为服务端需要申请ＳＳＬ证书来证明这个域名是大家所熟悉的Ｂ站（ＳＳＬ证书比ＴＳＬ证书更为人所熟知）。</p>
+<p>ＳＳＬ证书其实就是保存在源服务器的数据文件，要让ＳＳＬ证书生效就需要想ＣＡ申请，也就是Certificate Authority证书授权中心，ＣＡ属于第三方机构，这个机构颁发的证书除了表明域名是属于谁的，日期等等信息以外，重要的是这个证书里还包括了特定的公钥和私钥。</p>
+<p>简单来说服务器安装了ＳＳＬ证书以后，用户就可以通过ＨＴＴＰＳ来访问服务器了，当然浏览器也会把ＨＴＴＰ默认的端口80改为ＨＴＴＰＳ的默认端口４４３。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120153742494.png" alt="image-20220120153742494"></p>
+<h2 id="TLS握手"><a href="#TLS握手" class="headerlink" title="TLS握手"></a>TLS握手</h2><p>那现在浏览器通过ＨＴＴＰＳ访问服务器具体会有哪些变化呢？</p>
+<p>这里以ＴＬＳ１.２版本为例。</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>正常的ＴＣＰ三次握手是不变的</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120153937751.png" alt="image-20220120153937751"></p>
+<p>使用Wireshark进行抓包分析，抓包界面如下</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120154200507.png" alt="image-20220120154200507"></p>
+<p>ＴＣＰ三次握手之后，客户端发送了一个Client　Ｈｅｌｌｏ给服务端</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120154325577.png" alt="image-20220120154325577"></p>
+<p>客户端就会告诉服务端支持ＴＬＳ１.２版本和支持的加密套件，这里的16个加密套件组合可以理解为不同的加密算法组合，然后生成一个随机数发送给服务端（第二个框框就是随机数）。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120154431776.png" alt="image-20220120154431776"></p>
+<p>服务端收到客户端打的招呼，当然也要和客户端打招呼，所以接下来就是Ｓｅｒｖｅｒ　Ｈｅｌｌｏ发送给客户端。在响应报文里面会告诉客户端，服务端确认支持的ＴＬＳ版本以及选择的加密套件，并且服务器也生成一个随机数发送给客户端。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120154734196.png" alt="image-20220120154734196"></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120154846994.png" alt="image-20220120154846994"></p>
+<p>接下服务器会再发一个响应，来出示服务器自己的证书，这样浏览器就可以根据对照自己的证书信任列表来确认这个服务器是否可信。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155223754.png" alt="image-20220120155223754"></p>
+<p>发了证书，当然少不了哦公钥。Ｓｅｒｖｅｒ　ｋｅｙ这一步就会把公钥发送给客户端，而不会傻傻的吧私钥发出去。如果服务器也想要客户端的证书会在这里发出请求，比如登录网银就很可能需要这个步骤了。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155102492.png" alt="image-20220120155102492"></p>
+<p>服务器发生了这么多响应，还要告诉客户端发送完了。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155449424.png" alt="image-20220120155449424"></p>
+<p>截止到目前这些请求和响应依旧还未进行加密，现在就轮到客户端来处理这些响应了。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155544120.png" alt="image-20220120155544120"></p>
+<p>Ｃｌｉｅｎｔ　ｋｅｙ　Ｅｘｃｈａｎｇｅ这一步是重点，这一步客户端会生成第三个随机数，也叫预主密钥，这第三个随机数会用刚刚收到的公钥进行加密，并且把这个加密后的随机数发送给服务器，正是这里Pubkev显示的随机数。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155749191.png" alt="image-20220120155749191"></p>
+<p>ｃｈａｎｇｅ　ｃｉｐｈｅｒ　Ｓｐｅｃ这一步就是告诉服务器往后的数据就用商议好的算法和密钥来加密咯</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155904524.png" alt="image-20220120155904524"></p>
+<p>客户端这里发送Ｅｎｃｒｙｐｔｅｄ　Ｈａｎｄｓｈａｋｅ　Ｍｅｓｓａｇｅ，表示客户端这边的TLS协商已经没有问题了，加密开始。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120155931721.png" alt="image-20220120155931721"></p>
+<p>同样地后面服务器也发来了Ｅｎｃｒｙｐｔｅｄ　Ｈａｎｄｓｈａｋｅ　Ｍｅｓｓａｇｅ，表示服务器这边也准备好了，这里也表示着TLS的握手已经成功了，可以给数据加密讲行交换了。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120160127089.png" alt="image-20220120160127089"></p>
 <blockquote>
-<p>ISP DNS:ISP 是互联网服务提供商(Internet Service Provider)的简称，ISP 有专门的 DNS 服务器应对 DNS 查询请求。</p>
+<p>这里没有解释第一随机数和第二随机数的含义，总结时会讲到</p>
 </blockquote>
-<p><strong>根域名服务器查询</strong></p>
-<p>ISP 的 DNS 服务器还找不到的话，它就会向互联网上的根服务器发出请求，进行递归查询</p>
-<p>（DNS 服务器先问根域名服务器.com 域名服务器的 IP 地址，然后再问 .baidu 域名服务器，依次类推）</p>
-<p>流程图如下</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191807702.png" alt="image-20220118191807702"></p>
-<h3 id="建立TCP连接"><a href="#建立TCP连接" class="headerlink" title="建立TCP连接"></a>建立TCP连接</h3><p>TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118174728733.png" alt="image-20220118174728733"></p>
-<h4 id="应用层：发送-HTTP-请求"><a href="#应用层：发送-HTTP-请求" class="headerlink" title="应用层：发送 HTTP 请求"></a><strong>应用层：发送 HTTP 请求</strong></h4><p>浏览器从地址栏得到服务器 IP，接着构造一个 HTTP 报文，其中包括：</p>
-<ul>
-<li>请求行包含请求方法、URL、协议版本</li>
-<li>请求报头(Request Header)：由 “关键字: 值”对组成，每行一对，关键字与值使用英文 “:” 分割</li>
-<li>请求体：请求参数，并不是所有的请求都有请求参数。一般 get 参数 的格式 <code>name=tom&amp;password=1234&amp;realName=tomson</code>,也可以将参数放在 body 里面。</li>
+<h3 id="握手总结"><a href="#握手总结" class="headerlink" title="握手总结"></a>握手总结</h3><ul>
+<li>客户端和服务端打招呼，并且把自己支持的TLS版本，加密套件发给服务端，同时还生成了一个随机数给服务端，称为第一随机数</li>
+<li>接着服务端打招呼，服务端确认支持的TLS版本以及选择的加密套件，并且服务器也生成随机数发给客户端，称为第二随机数</li>
+<li>接着服务端还把证书和公钥发送给客户端</li>
+<li>都发送完毕就告诉客户端</li>
+<li>现在客户端这边生成随机数，我们称为第3个随机数，预主密钥，这个预主密钥不会直接发送出去，而是用刚刚收到的公钥进行加密后再发送出去，然后客户端这边的TLS协商已经没问题了，加密开始</li>
+<li>服务端收到加密后的预主密钥以后，会用自己的私钥进行解密，这样服务端就知道预主密钥了，而且只有客户端和服务端知道这预主密钥，因为没有进行直接传输，没有其它人知道这预主密钥是什么，除非私钥被泄露了。</li>
+<li>最后客户端用预主密钥，第1随机数和第2随机数计算出会话密钥，服务端也用预主密钥，第1随机数和第2随机数计算出会话密钥，各自得到的会话密钥是相同的，也就是说前面的步骤都是非对称加密，为了得到这个会话密钥</li>
 </ul>
-<h4 id="传输层：TCP-传输报文"><a href="#传输层：TCP-传输报文" class="headerlink" title="传输层：TCP 传输报文"></a><strong>传输层：TCP 传输报文</strong></h4><p>建立TCP连接</p>
-<p>在传输报文之前会先建立 TCP连接，也就是后面我们要说的三次握手。</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191751503.png" alt="image-20220118191751503"></p>
-<p>关闭TCP连接</p>
-<p>为了避免服务器与客户端双方的资源占用和损耗，当双方没有请求或响应传递时，任意一方都可以发起关闭请求。与创建TCP连接的3次握手类似，关闭TCP连接，需要四次挥手。</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191742860.png" alt="image-20220118191742860"></p>
-<p>-<a href="###%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">三次握手四次挥手的过程参考文章</a></p>
-<h4 id="网络层：IP协议查询Mac地址"><a href="#网络层：IP协议查询Mac地址" class="headerlink" title="网络层：IP协议查询Mac地址"></a><strong>网络层：IP协议查询Mac地址</strong></h4><p>将数据段打包，并加入源及目标的IP地址，并且负责寻找传输路线。</p>
-<p>判断目标地址是否与当前地址处于同一网络中，是的话直接根据 Mac 地址发送，否则使用路由表查找下一跳地址，以及使用 ARP 协议查询它的 Mac 地址。</p>
-<blockquote>
-<p>在路由表中,任意一个路由器的任意一个端口所对应的直连路由器的端口就是这个路由器的下一跳路由器,所对应的IP地址就是下一跳地址.</p>
-<p>下一跳你可以理解为“下一个路由器”<br>下一跳地址可以理解为“下一个路由器IP地址”.</p>
-</blockquote>
-<blockquote>
-<p>注意：在 OSI 参考模型中 ARP 协议位于链路层，但在 TCP/IP 中，它位于网络层。</p>
-</blockquote>
-<h4 id="链路层：以太网协议"><a href="#链路层：以太网协议" class="headerlink" title="链路层：以太网协议"></a><strong>链路层：以太网协议</strong></h4><p><strong>以太网协议</strong></p>
-<p>根据以太网协议将数据分为以“帧”为单位的数据包，每一帧分为两个部分：</p>
-<ul>
-<li>标头：数据包的发送者、接受者、数据类型</li>
-<li>数据：数据包具体内容</li>
-</ul>
-<h3 id="服务器处理请求"><a href="#服务器处理请求" class="headerlink" title="服务器处理请求"></a>服务器处理请求</h3><h4 id="大致流程-1"><a href="#大致流程-1" class="headerlink" title="大致流程"></a><strong>大致流程</strong></h4><p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191731701.png" alt="image-20220118191731701"></p>
-<p>服务器端收到请求后的由web服务器（准确说应该是http服务器）处理请求，诸如Apache、Ngnix、IIS等。web服务器解析用户请求，知道了需要调度哪些资源文件，再通过相应的这些资源文件处理用户请求和参数，并调用数据库信息，最后将结果通过web服务器返回给浏览器客户端。</p>
-<h4 id="TCP报文"><a href="#TCP报文" class="headerlink" title="TCP报文"></a><strong>TCP报文</strong></h4><p>TCP协议的报文格式也需要回顾一下：</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/v2-01f79cd44556d2c72edd474debc0bb53_720w.jpg" alt="img"></p>
-<p>TCP报文段的首部分为固定部分和选项部分，固定部分长20byte，而选项部分长度可变。（若整个首部长度不是4byte的整数倍的话，则需要用填充位来填充）在固定首部中</p>
-<p>seq（序号）：TCP连接字节流中每一个字节都会有一个编号，而本字段的值指的是本报文段所发送数据部分第一个字节的序号。<br>ack（确认号）：表示期望收到的下一个报文段数据部分的第一个字节的编号，编号为ack-1及以前的字节已经收到。<br>SYN：当本字段为1时，表示这是一个连接请求或者连接接受报文。<br>ACK：仅当本字段为1时，确认号才有效。<br>FIN：用来释放一个连接。当本字段为1时，表示此报文段的发送端数据已发送完毕，要求释放运输连接。</p>
-<h4 id="HTTP报文"><a href="#HTTP报文" class="headerlink" title="HTTP报文"></a><strong>HTTP报文</strong></h4><p>服务器会将TCP报文中的HTTP报文解析并提取出来。</p>
-<p>与 TCP/UDP 类似需要在传输数据前设置一些请求头，不同的是 HTTP 是一个 “纯文本” 的协议，所有的头都是 ASCII 码的文本，很容易看出来是什么。</p>
-<p>再者就是他的请求报文与响应报文的结构基本一样，主要三大部分组成：</p>
-<ol>
-<li>起始行(Start Line)：描述请求或者响应的基本信息。</li>
-<li>报文首部Header：使用 key-value 的形式详细说明报文信息。</li>
-<li>空行。</li>
-<li>报文主体（Entity）：传输的数据，图片、视频、文本等都可以。</li>
-</ol>
-<p>这其中前两部分起始行和头部字段经常又合称为“<strong>请求头</strong>”或“<strong>响应头</strong>”，消息正文又称为“<strong>实体</strong>”，但与“<strong>header</strong>”对应，很多时候就直接称为“<strong>body</strong>”。</p>
-<p><strong>HTTP请求的一个例子：</strong></p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/HTTP_Request.png" alt="A basic HTTP request"></p>
-<p><strong>HTTP响应的一个例子：</strong></p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/HTTP_Response.png" alt="img"></p>
-<p>状态码由3位数字和原因短语组成。根据首位数字，状态码可以分为五类：</p>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118185016988.png" alt="image-20220118185016988"></p>
-<h3 id="浏览器接受响应"><a href="#浏览器接受响应" class="headerlink" title="浏览器接受响应"></a>浏览器接受响应</h3><p>浏览器接收到来自服务器的响应资源后，会对资源进行分析。</p>
-<p>首先查看 Response header，根据不同状态码做不同的事。</p>
-<p>如果响应资源进行了压缩（比如 gzip），还需要进行解压。</p>
-<p>然后，对响应资源做缓存。</p>
-<p>接下来，根据响应资源里的 <a href="https://link.zhihu.com/?target=https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> 类型去解析响应内容（比如 HTML、Image各有不同的解析方式）。</p>
-<h3 id="渲染数据"><a href="#渲染数据" class="headerlink" title="渲染数据"></a>渲染数据</h3><p>接收到响应文本 HTML，则开始执行浏览器渲染机制。</p>
-<p>不同的浏览器渲染可能有所差异，但是基本按照以下步骤执行：</p>
-<ol>
-<li>根据 HTML 解析 DOM 树；</li>
-<li>根据 CSS 解析出 CSS 规则树；</li>
-<li>结合 DOM 树与 CSS 规则树，生成渲染树；</li>
-<li>根据生成的渲染树计算每个节点的信息；</li>
-<li>根据节点信息绘制画面展示给用户。</li>
-</ol>
-<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220118191708306.png" alt="image-20220118191708306"></p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview">HTTP概述</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24860403">简述TCP连接的建立与释放（三次握手、四次挥手）</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/80551769">在浏览器输入 URL 回车之后发生了什么（超详细版）</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/t2Csrl7idUXISKW54cpV1g">浏览器输入网址，小手一点，后面到底发生了什么？</a></p>
-<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000012092552">细说浏览器输入URL后发生了什么</a></p>
+<p>后面的会话大家都只使用这个会话密钥对数据进行加密，也就是后面使用的是对称加密，大家都使用同一个密钥，会话后面不使用非对称加密是因为大家都能看到消耗资源非常大，而且得到会话密钥以后就没人知道密钥是什么了，如果与其它服务器沟通就是建立新的会话，会话密钥只应用在当前会话，更加提高了安全性。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120161437008.png" alt="image-20220120161437008"></p>
 
                 
             </div>
@@ -584,7 +515,7 @@ DNS域名解析
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wzykt.github.io/2022/01/18/zai-liu-lan-qi-shu-ru-url-hui-che-zhi-hou-fa-sheng-liao-shi-me/">https://wzykt.github.io/2022/01/18/zai-liu-lan-qi-shu-ru-url-hui-che-zhi-hou-fa-sheng-liao-shi-me/</a>
+                    <a href="https://wzykt.github.io/2022/01/20/https-wei-shi-me-an-quan/">https://wzykt.github.io/2022/01/20/https-wei-shi-me-an-quan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -622,12 +553,8 @@ DNS域名解析
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/TCP-IP/">
-                                    <span class="chip bg-color">TCP/IP</span>
-                                </a>
-                            
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
+                                <a href="/tags/HTTPS/">
+                                    <span class="chip bg-color">HTTPS</span>
                                 </a>
                             
                         </div>
@@ -673,9 +600,10 @@ DNS域名解析
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/01/20/https-wei-shi-me-an-quan/">
                     <div class="card-image">
@@ -693,9 +621,9 @@ DNS域名解析
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -708,6 +636,7 @@ DNS域名解析
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -726,13 +655,13 @@ DNS域名解析
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/14/redis/">
+                <a href="/2022/01/18/zai-liu-lan-qi-shu-ru-url-hui-che-zhi-hou-fa-sheng-liao-shi-me/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/images/22.jpg" class="responsive-img" alt="Redis">
+                        <img src="/medias/images/14.jpg" class="responsive-img" alt="在浏览器输入 URL 回车之后发生了什么">
                         
-                        <span class="card-title">Redis</span>
+                        <span class="card-title">在浏览器输入 URL 回车之后发生了什么</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -743,7 +672,7 @@ DNS域名解析
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-18
                             </span>
                         <span class="publish-author">
                             
@@ -753,10 +682,6 @@ DNS域名解析
                                     学习笔记
                                 </a>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -764,8 +689,12 @@ DNS域名解析
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/TCP-IP/">
+                        <span class="chip bg-color">TCP/IP</span>
+                    </a>
+                    
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>
