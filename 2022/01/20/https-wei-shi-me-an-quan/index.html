@@ -7,8 +7,9 @@
     <meta name="keywords" content="HTTPS为什么安全, KTS Blog">
     <meta name="description" content="HTTPS简介HTTPS 不是一个新鲜的协议，它仍然是基于 HTTP 协议，可以把 HTTPS 协议看成是穿着防弹衣的 HTTP 协议，协议层对比如下图：
 
-HTTP 和 HTTPS 协议层对比
-基于 HTTP 协议的网络传输是明文的，对响">
+HTTP 由于是明文传输，所以安全上存在以下三个风险：
+
+窃听风险，比如通信链路上">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -404,7 +405,7 @@ HTTP 和 HTTPS 协议层对比
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
@@ -426,7 +427,12 @@ HTTP 和 HTTPS 协议层对比
             <div id="articleContent">
                 <h2 id="HTTPS简介"><a href="#HTTPS简介" class="headerlink" title="HTTPS简介"></a>HTTPS简介</h2><p>HTTPS 不是一个新鲜的协议，它仍然是基于 HTTP 协议，可以把 HTTPS 协议看成是穿着防弹衣的 HTTP 协议，协议层对比如下图：</p>
 <p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120162046706.png" alt="image-20220120162046706"></p>
-<p>HTTP 和 HTTPS 协议层对比</p>
+<p>HTTP 由于是明文传输，所以安全上存在以下三个风险：</p>
+<ul>
+<li><strong>窃听风险</strong>，比如通信链路上可以获取通信内容，用户号容易没。</li>
+<li><strong>篡改风险</strong>，比如强制入垃圾广告，视觉污染，用户眼容易瞎。</li>
+<li><strong>冒充风险</strong>，比如冒充淘宝网站，用户钱容易没</li>
+</ul>
 <p>基于 HTTP 协议的网络传输是明文的，对响应的内容也不加验证，这意味着只要传输内容被黑客截获，黑客就能知道传输内容，甚至能够返回一段修改后的内容给用户。这就是常说的 HTTP 劫持，一些运营商会使用这种手段往用户的网页里注入广告。</p>
 <p><img src="https://gitee.com/kisstt/typora/raw/master/images/11909910-936bcf3cc4732aa8.png" alt="img"></p>
 <h2 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h2><h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p>对称加密，顾名思义，加密方与解密方使用同一钥匙(秘钥)。具体一些就是，发送方通过使用相应的加密算法和秘钥，对将要发送的信息进行加密；对于接收方而言，使用解密算法和相同的秘钥解锁信息，从而有能力阅读信息。</p>
@@ -440,7 +446,8 @@ HTTP 和 HTTPS 协议层对比
 <p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120152738500.png" alt="image-20220120152738500"></p>
 <p>那么TLS用那种加密方式呢？</p>
 <p>答案是都用上了</p>
-<h2 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h2><p>这里还有一个问题，虽然我们现在可以对数据进行加密，但是我们还是不知道和我们沟通的是否是自己想要沟通的对象，比如b站的域名</p>
+<h2 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h2><p>HTTPS 协议需要向 CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的。</p>
+<p>这里还有一个问题，虽然我们现在可以对数据进行加密，但是我们还是不知道和我们沟通的是否是自己想要沟通的对象，比如b站的域名</p>
 <p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220120153118158.png" alt="image-20220120153118158"></p>
 <p>就会有不法分子伪装b站域名来让你访问，还好ＨＴＴＰＳ解决了这个问题。因为服务端需要申请ＳＳＬ证书来证明这个域名是大家所熟悉的Ｂ站（ＳＳＬ证书比ＴＳＬ证书更为人所熟知）。</p>
 <p>ＳＳＬ证书其实就是保存在源服务器的数据文件，要让ＳＳＬ证书生效就需要想ＣＡ申请，也就是Certificate Authority证书授权中心，ＣＡ属于第三方机构，这个机构颁发的证书除了表明域名是属于谁的，日期等等信息以外，重要的是这个证书里还包括了特定的公钥和私钥。</p>
