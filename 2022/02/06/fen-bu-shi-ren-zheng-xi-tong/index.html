@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="KTS Blog">
-    <meta name="description" content="分布式认证系统需求分析分布式认证需求分布式系统的每个服务都会有认证、授权的需求，如果每个服务都实现一套认证授权逻辑会非常冗余，考虑分布式 
-系统共享性的特点，需要由独立的认证服务处理系统认证授权的请求；考虑分布式系统开放性的特点，不仅对系统">
+    <meta name="keywords" content="分布式认证系统, KTS Blog">
+    <meta name="description" content="分布式认证系统需求分析分布式认证需求分布式系统的每个服务都会有认证、授权的需求，如果每个服务都实现一套认证授权逻辑会非常冗余，考虑分布式 系统共享性的特点，需要由独立的认证服务处理系统认证授权的请求；考虑分布式系统开放性的特点，不仅对系统内">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>KTS Blog</title>
+    <title>分布式认证系统 | KTS Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -247,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/images/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">分布式认证系统</h1>
                 </div>
             </div>
         </div>
@@ -414,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8k
+                    8.6k
                 </div>
                 
 
@@ -434,34 +433,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="分布式认证系统"><a href="#分布式认证系统" class="headerlink" title="分布式认证系统"></a>分布式认证系统</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><h4 id="分布式认证需求"><a href="#分布式认证需求" class="headerlink" title="分布式认证需求"></a><strong>分布式认证需求</strong></h4><p>分布式系统的每个服务都会有认证、授权的需求，如果每个服务都实现一套认证授权逻辑会非常冗余，考虑分布式 </p>
-<p>系统共享性的特点，需要由独立的认证服务处理系统认证授权的请求；考虑分布式系统开放性的特点，不仅对系统 </p>
-<p>内部服务提供认证，对第三方系统也要提供认证。分布式认证的需求总结如下： </p>
+                <h2 id="分布式认证系统"><a href="#分布式认证系统" class="headerlink" title="分布式认证系统"></a>分布式认证系统</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><h4 id="分布式认证需求"><a href="#分布式认证需求" class="headerlink" title="分布式认证需求"></a><strong>分布式认证需求</strong></h4><p>分布式系统的每个服务都会有认证、授权的需求，如果每个服务都实现一套认证授权逻辑会非常冗余，考虑分布式 系统共享性的特点，需要由独立的认证服务处理系统认证授权的请求；考虑分布式系统开放性的特点，不仅对系统内部服务提供认证，对第三方系统也要提供认证。分布式认证的需求总结如下： </p>
 <p><strong>统一认证授权</strong> </p>
 <p>提供独立的认证服务，统一处理认证授权。 </p>
-<p>无论是不同类型的用户，还是不同种类的客户端(web端，H5、APP)，均采用一致的认证、权限、会话机制，实现 </p>
-<p>统一认证授权。</p>
-<p>要实现统一则认证方式必须可扩展，支持各种认证需求，比如：用户名密码认证、短信验证码、二维码、人脸识别 </p>
-<p>等认证方式，并可以非常灵活的切换。 </p>
+<p>无论是不同类型的用户，还是不同种类的客户端(web端，H5、APP)，均采用一致的认证、权限、会话机制，实现统一认证授权。要实现统一则认证方式必须可扩展，支持各种认证需求，比如：用户名密码认证、短信验证码、二维码、人脸识别等认证方式，并可以非常灵活的切换。 </p>
 <p><strong>应用接入认证</strong> </p>
-<p>应提供扩展和开放能力，提供安全的系统对接机制，并可开放部分API给接入第三方使用，一方应用（内部 系统服 </p>
-<p>务）和三方应用（第三方应用）均采用统一机制接入。 </p>
+<p>应提供扩展和开放能力，提供安全的系统对接机制，并可开放部分API给接入第三方使用，一方应用（内部 系统服务）和三方应用（第三方应用）均采用统一机制接入。 </p>
 <h4 id="分布式认证方案"><a href="#分布式认证方案" class="headerlink" title="分布式认证方案"></a>分布式认证方案</h4><p><strong>1、基于session的认证方式</strong> </p>
+<p><strong>session-cookie 工作流程：</strong></p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220217210459958.png" alt="image-20220217210459958"></p>
 <p>在分布式的环境下，基于session的认证会出现一个问题，每个应用服务都需要在session中存储用户身份信息，通过负载均衡将本地的请求分配到另一个应用服务需要将session信息带过去，否则会重新认证。 </p>
 <p>这个时候，通常的做法有下面几种： </p>
-<p><strong>Session****复制</strong>：多台应用服务器之间同步session，使session保持一致，对外透明。 </p>
-<p><strong>Session****黏贴</strong>：当用户访问集群中某台服务器后，强制指定后续所有请求均落到此机器上。 </p>
-<p><strong>Session****集中存储</strong>：将Session存入分布式缓存中，所有服务器应用实例统一从分布式缓存中存取Session。 </p>
+<p><strong>Session复制</strong>：多台应用服务器之间同步session，使session保持一致，对外透明。 </p>
+<p><strong>Session黏贴</strong>：当用户访问集群中某台服务器后，强制指定后续所有请求均落到此机器上。 </p>
+<p><strong>Session集中存储</strong>：将Session存入分布式缓存中，所有服务器应用实例统一从分布式缓存中存取Session。 </p>
 <p>总体来讲，基于session认证的认证方式，可以更好的在服务端对会话进行控制，且安全性较高。但是，session机 </p>
 <p>制方式基于cookie，在复杂多样的移动客户端上不能有效的使用，并且无法跨域，另外随着系统的扩展需提高 </p>
 <p>session的复制、黏贴及存储的容错性。 </p>
 <p><strong>2、基于token的认证方式</strong> </p>
 <p>基于token的认证方式，服务端不用存储认证数据，易维护扩展性强， </p>
-<p>客户端可以把token 存在任意地方，并且可 </p>
-<p>以实现web和app统一认证机制。其缺点也很明显，</p>
-<p>token由于自包含信息，因此一般数据量较大，而且每次请求 </p>
-<p>都需要传递，因此比较占带宽。另外，</p>
-<p>token的签名验签操作也会给cpu带来额外的处理负担。</p>
+<p>客户端可以把token 存在任意地方，并且可 以实现web和app统一认证机制。其缺点也很明显，token由于自包含信息，因此一般数据量较大，而且每次请求 都需要传递，因此比较占带宽。另外，token的签名验签操作也会给cpu带来额外的处理负担。</p>
 <p>token的认证方式，它的优点是： </p>
 <p>1、适合统一认证的机制，客户端、一方应用、三方应用都遵循一致的认证机制。 </p>
 <p>2、token认证方式对第三方应用接入更适合，因为它更开放，可使用当前有流行的开放协议Oauth2.0、JWT等。 </p>
@@ -492,7 +483,17 @@
 <p>Oauth协议目前发展到2.0版本，1.0版本过于复杂，2.0版本已得到广泛应用。 </p>
 <p>参考：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/oAuth/7153134?fr=aladdin">https://baike.baidu.com/item/oAuth/7153134?fr=aladdin</a> </p>
 <p>Oauth协议：<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc6749">https://tools.ietf.org/html/rfc6749</a> </p>
-<h4 id="Oauth2认证的过程"><a href="#Oauth2认证的过程" class="headerlink" title="Oauth2认证的过程"></a>Oauth2认证的过程</h4><h4 id="OAauth2-0角色"><a href="#OAauth2-0角色" class="headerlink" title="OAauth2.0角色"></a>OAauth2.0角色</h4><p>1、客户端 </p>
+<h4 id="Oauth2认证的过程"><a href="#Oauth2认证的过程" class="headerlink" title="Oauth2认证的过程"></a>Oauth2认证的过程</h4><p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220217210926431.png" alt="image-20220217210926431"></p>
+<ol>
+<li>用户在第三方应用上点击登录，应用向认证服务器发送请求，说有用户希望进行授权操作，同时说明自己是谁、用户授权完成后的回调url。</li>
+<li>认证服务器展示给用户自己的授权界面。</li>
+<li>用户进行授权操作，认证服务器验证成功后，生成一个授权编码code，并跳转到第三方的回调url。</li>
+<li>第三方应用拿到code后，连同自己在平台上身份信息（ID密码）发送给认证服务器，再一次进行验证请求，说明自己的身份正确，并且用户也已经授权我了，来换取访问用户资源的权限。</li>
+<li>认证服务器对请求信息进行验证，如果没问题，就生成访问资源服务器的令牌access_token，交给第三方应用。</li>
+<li>第三方应用使用access_token向资源服务器请求资源。</li>
+<li>资源服务器验证access_token成功后返回响应资源。</li>
+</ol>
+<h4 id="OAauth2-0角色"><a href="#OAauth2-0角色" class="headerlink" title="OAauth2.0角色"></a>OAauth2.0角色</h4><p>1、客户端 </p>
 <p>本身不存储资源，需要通过资源拥有者的授权去请求资源服务器的资源，比如：Android客户端、Web客户端（浏 </p>
 <p>览器端）、微信客户端等。 </p>
 <p>2、资源拥有者 </p>
@@ -512,6 +513,7 @@
 <p>令牌采用JWT格式即可解决上边的问题，用户认证通过会得到一个JWT令牌，JWT令牌中已经包括了用户相关的信 息，客户端只需要携带JWT访问资源服务，资源服务根据事先约定的算法自行完成令牌校验，无需每次都请求认证 服务完成授权。 </p>
 <p>1、什么是JWT？ </p>
 <p>JSON Web Token（JWT）是一个开放的行业标准（RFC 7519），它定义了一种简介的、自包含的协议格式，用于 在通信双方传递json对象，传递的信息经过数字签名可以被验证和信任。JWT可以使用HMAC算法或使用RSA的公 钥/私钥对来签名，防止被篡改。 </p>
+<p>通俗点讲：在HTTP通信 过程中，进行身份认证的一种方式。也可以在各个服务之间进行信息传输，是Token认证方式的一种具体实现</p>
 <p>官网：<a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io/</a> </p>
 <p>标准：<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">https://tools.ietf.org/html/rfc7519</a> </p>
 <p>JWT令牌的优点： </p>
@@ -521,6 +523,8 @@
 <p>4）资源服务使用JWT可不依赖认证服务即可完成授权。</p>
 <p>缺点： </p>
 <p>１）JWT令牌较长，占存储空间比较大。 </p>
+<h4 id="JWT的认证流程"><a href="#JWT的认证流程" class="headerlink" title="JWT的认证流程"></a>JWT的认证流程</h4><p>jwt的认证方式，服务端不需要保存任何session会话，是无状态的，比较容易扩展。<br> 因为不依赖cookie，可以存在localStorage里，所以可以防御csrf攻击，更安全。<br> JWT 默认是不加密的，任何人都可以读到，所以不要把秘密信息放在这个部分。</p>
+<p><img src="https://gitee.com/kisstt/typora/raw/master/images/image-20220217210712654.png" alt="image-20220217210712654"></p>
 <h4 id="JWT令牌结构"><a href="#JWT令牌结构" class="headerlink" title="JWT令牌结构"></a>JWT令牌结构</h4><p>通过学习JWT令牌结构为自定义jwt令牌打好基础。 </p>
 <p>JWT令牌由三部分组成，每部分中间使用点（.）分隔，比如：xxxxx.yyyyy.zzzzz </p>
 <ul>
@@ -559,6 +563,13 @@
 <p>secret：签名所使用的密钥。 </p>
 </li>
 </ul>
+<h4 id="JWT-泄露问题"><a href="#JWT-泄露问题" class="headerlink" title="JWT 泄露问题"></a>JWT 泄露问题</h4><p>解决 JWT 的泄露问题是一个平衡的问题。有三种处理方式由轻到重，看你业务重要性酌情选择：</p>
+<ul>
+<li>将 JWT 的过期时间设置的很短，即使泄露也无关紧要。或者旧的直接加入黑名单</li>
+<li>在服务端设计 JWT 的黑名单机制，将泄露的 Token 加黑名单即可。</li>
+<li>保存签发的 JWT，当 JWT 泄露时，直接设置失效。</li>
+</ul>
+<p>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6972395146599989279">https://juejin.cn/post/6972395146599989279</a></p>
 <h2 id="二、Spring-Cloud-Security-OAuth2"><a href="#二、Spring-Cloud-Security-OAuth2" class="headerlink" title="二、Spring Cloud Security OAuth2"></a>二、Spring Cloud Security OAuth2</h2><h3 id="1、环境介绍"><a href="#1、环境介绍" class="headerlink" title="1、环境介绍"></a>1、环境介绍</h3><p>OAuth2.0的服务提供方涵盖两个服务，即授权服务 (Authorization Server，也叫认证服务) 和资源服务 (Resource Server)，使用 Spring Security OAuth2 的时候你可以选择把它们在同一个应用程序中实现，也可以选择建立使用 同一个授权服务的多个资源服务。 </p>
 <p><strong>授权服务 (Authorization Server）</strong>应包含对接入端以及登入用户的合法性进行验证并颁发token等功能，对令牌的请求端点由 SpringMVC 控制器进行实现，下面是配置一个认证服务必须要实现的endpoints： </p>
 <p><strong>AuthorizationEndpoint</strong> 服务于认证请求。默认 URL： /oauth/authorize 。 </p>
